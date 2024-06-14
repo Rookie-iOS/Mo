@@ -16,6 +16,7 @@ class Moto_RepaymentViewController: Moto_ViewController {
     @IBOutlet weak var containerView: UIView!
     private var method: Moto_RepaymentMethodModel?
     private var channel: Moto_RepaymentMethodNoModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -191,6 +192,7 @@ class Moto_RepaymentViewController: Moto_ViewController {
             if model.code == 200 {
                 guard let url = model.data?.redirect_url else { return }
                 guard let web = R.storyboard.main.moto_web() else { return }
+                web.fromRepryment = 1
                 web.title = "Repayment"
                 web.loadUrlString(url)
                 navigationController?.pushViewController(web, animated: true)

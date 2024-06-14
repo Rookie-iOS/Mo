@@ -11,6 +11,7 @@ import WisdomHUD
 
 class Moto_WebViewController: Moto_ViewController {
     
+    var fromRepryment = 0
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var bottomBtn: UIButton!
     @IBOutlet weak var containerView: UIView!
@@ -131,10 +132,14 @@ class Moto_WebViewController: Moto_ViewController {
         if webView.canGoBack {
             webView.goBack()
         }else {
-            navigationController?.popViewController(animated: true)
+            if fromRepryment == 1 {
+                navigationController?.popToRootViewController(animated: true)
+            }else {
+                navigationController?.popViewController(animated: true)
+                
+            }
         }
     }
-    
 }
 
 extension Moto_WebViewController: WKNavigationDelegate {
