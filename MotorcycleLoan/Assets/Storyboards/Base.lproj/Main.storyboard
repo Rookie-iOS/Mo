@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F9B-xq-ZtG">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Moto Tab Bar Controller-->
+        <scene sceneID="2GG-33-VGp">
+            <objects>
+                <tabBarController id="F9B-xq-ZtG" customClass="Moto_TabBarController" customModule="MotorcycleLoan" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7F9-Md-MZj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="wpK-NN-TvF" kind="relationship" relationship="viewControllers" id="Cvl-Ji-H7e"/>
+                        <segue destination="gjm-eE-6cd" kind="relationship" relationship="viewControllers" id="8vS-Ig-2JW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rxT-uK-9Q5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1378" y="-73"/>
+        </scene>
+        <!--home-->
+        <scene sceneID="8mV-3U-aeT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="home" id="wpK-NN-TvF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="AUX-9A-Ugo"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d5r-lJ-Evc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-838" y="-173"/>
+        </scene>
+        <!--Moto Web View Controller-->
+        <scene sceneID="4th-zf-Usz">
+            <objects>
+                <viewController storyboardIdentifier="moto_web" id="OxM-Cz-BcI" customClass="Moto_WebViewController" customModule="MotorcycleLoan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7aE-rS-nfr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blN-NK-9vt">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NsD-0R-rQa">
+                                <rect key="frame" x="0.0" y="818" width="393" height="0.0"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KZ-o6-cdx">
+                                        <rect key="frame" x="13" y="10" width="367" height="44"/>
+                                        <color key="backgroundColor" red="0.14509803921568626" green="0.37647058823529411" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="hTG-jl-pSi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Aceptar"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnClick" destination="OxM-Cz-BcI" eventType="touchUpInside" id="Br8-M3-1SK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5KZ-o6-cdx" secondAttribute="trailing" constant="13" id="AoK-FV-Q88"/>
+                                    <constraint firstAttribute="height" id="Hhw-Mn-xxy"/>
+                                    <constraint firstItem="5KZ-o6-cdx" firstAttribute="leading" secondItem="NsD-0R-rQa" secondAttribute="leading" constant="13" id="Rik-Ea-s13"/>
+                                    <constraint firstItem="5KZ-o6-cdx" firstAttribute="top" secondItem="NsD-0R-rQa" secondAttribute="top" priority="750" constant="10" id="Wvp-vD-7PN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Aee-3R-tao"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NsD-0R-rQa" firstAttribute="leading" secondItem="Aee-3R-tao" secondAttribute="leading" id="C7z-Ez-loT"/>
+                            <constraint firstItem="Aee-3R-tao" firstAttribute="bottom" secondItem="NsD-0R-rQa" secondAttribute="bottom" id="FAW-0A-MsV"/>
+                            <constraint firstItem="blN-NK-9vt" firstAttribute="top" secondItem="Aee-3R-tao" secondAttribute="top" id="KiJ-fy-e11"/>
+                            <constraint firstItem="NsD-0R-rQa" firstAttribute="top" secondItem="blN-NK-9vt" secondAttribute="bottom" id="LRR-zV-WfI"/>
+                            <constraint firstItem="Aee-3R-tao" firstAttribute="trailing" secondItem="blN-NK-9vt" secondAttribute="trailing" id="Qst-uW-LQf"/>
+                            <constraint firstItem="blN-NK-9vt" firstAttribute="leading" secondItem="Aee-3R-tao" secondAttribute="leading" id="drD-um-U8L"/>
+                            <constraint firstItem="Aee-3R-tao" firstAttribute="trailing" secondItem="NsD-0R-rQa" secondAttribute="trailing" id="efG-Je-vWI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomBtn" destination="5KZ-o6-cdx" id="WgT-Tx-bgC"/>
+                        <outlet property="bottomView" destination="NsD-0R-rQa" id="L1b-Ef-mqn"/>
+                        <outlet property="bottomViewHeight" destination="Hhw-Mn-xxy" id="Tne-nr-9Bh"/>
+                        <outlet property="containerView" destination="blN-NK-9vt" id="Ugq-yj-TyA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Noc-Se-rbB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-344.27480916030532" y="-73.239436619718319"/>
+        </scene>
+        <!--mine-->
+        <scene sceneID="HMO-GH-xel">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Mine" referencedIdentifier="mine" id="gjm-eE-6cd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="h02-Br-O52"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pXi-HL-n7t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-841" y="39"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

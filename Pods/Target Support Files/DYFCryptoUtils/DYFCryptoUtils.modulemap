@@ -1,0 +1,6 @@
+framework module DYFCryptoUtils {
+  umbrella header "DYFCryptoUtils-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Moto_SelectInfoView" customModule="MotorcycleLoan" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqy-eO-sb0">
+                    <rect key="frame" x="0.0" y="766" width="393" height="52"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uZL-ql-GNu">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="52"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XES-Il-7pI">
+                                    <rect key="frame" x="196.66666666666666" y="17" width="0.0" height="18"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="18" id="ldx-AA-cw1"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnx-o8-cBc">
+                                    <rect key="frame" x="332" y="0.0" width="48" height="52"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="48" id="mYv-wM-dKm"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Cancel"/>
+                                    <connections>
+                                        <action selector="cancelAction" destination="iN0-l3-epB" eventType="touchUpInside" id="BG7-cz-dwi"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.1450980392" green="0.37647058820000001" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="52" id="4c0-k0-RSA"/>
+                                <constraint firstItem="XES-Il-7pI" firstAttribute="centerX" secondItem="uZL-ql-GNu" secondAttribute="centerX" id="8dH-Kn-24z"/>
+                                <constraint firstItem="lnx-o8-cBc" firstAttribute="centerY" secondItem="uZL-ql-GNu" secondAttribute="centerY" id="R7B-A6-RGG"/>
+                                <constraint firstAttribute="trailing" secondItem="lnx-o8-cBc" secondAttribute="trailing" constant="13" id="SFv-nr-ejv"/>
+                                <constraint firstItem="lnx-o8-cBc" firstAttribute="top" secondItem="uZL-ql-GNu" secondAttribute="top" id="bPs-vv-JpE"/>
+                                <constraint firstItem="XES-Il-7pI" firstAttribute="centerY" secondItem="uZL-ql-GNu" secondAttribute="centerY" id="nqj-G4-bJp"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="d7C-V6-sSP">
+                            <rect key="frame" x="0.0" y="52" width="393" height="0.0"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" id="6Yt-y2-tJi"/>
+                            </constraints>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="d7C-V6-sSP" secondAttribute="trailing" id="0as-bL-8E3"/>
+                        <constraint firstItem="d7C-V6-sSP" firstAttribute="top" secondItem="uZL-ql-GNu" secondAttribute="bottom" id="9cV-7o-zzW"/>
+                        <constraint firstItem="uZL-ql-GNu" firstAttribute="top" secondItem="dqy-eO-sb0" secondAttribute="top" id="9sW-Cy-ETQ"/>
+                        <constraint firstItem="d7C-V6-sSP" firstAttribute="leading" secondItem="dqy-eO-sb0" secondAttribute="leading" id="b5Y-6t-K7R"/>
+                        <constraint firstAttribute="bottom" secondItem="d7C-V6-sSP" secondAttribute="bottom" id="wT7-x0-cPt"/>
+                        <constraint firstAttribute="trailing" secondItem="uZL-ql-GNu" secondAttribute="trailing" id="y3n-C1-UaU"/>
+                        <constraint firstItem="uZL-ql-GNu" firstAttribute="leading" secondItem="dqy-eO-sb0" secondAttribute="leading" id="zxE-Lv-53T"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="dqy-eO-sb0" secondAttribute="bottom" id="g8Q-BX-JJS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dqy-eO-sb0" secondAttribute="trailing" id="sXE-7H-7Tm"/>
+                <constraint firstItem="dqy-eO-sb0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uIH-s2-SK3"/>
+            </constraints>
+            <connections>
+                <outlet property="bgView" destination="dqy-eO-sb0" id="4xY-aL-RAI"/>
+                <outlet property="tabIV" destination="d7C-V6-sSP" id="NHv-HH-dq4"/>
+                <outlet property="tableViewHeight" destination="6Yt-y2-tJi" id="5Me-D2-f9f"/>
+                <outlet property="titleText" destination="XES-Il-7pI" id="A1c-Az-SO8"/>
+            </connections>
+            <point key="canvasLocation" x="139.69465648854961" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

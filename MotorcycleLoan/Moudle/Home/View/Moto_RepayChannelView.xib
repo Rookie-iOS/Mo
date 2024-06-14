@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Moto_RepayChannelView" customModule="MotorcycleLoan" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="134"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XZ6-mS-n7Q">
+                    <rect key="frame" x="150.66666666666666" y="59" width="42" height="41"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tSy-CR-oED">
+                            <rect key="frame" x="0.0" y="3.6666666666666643" width="34" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="34" id="AZ4-yq-4jg"/>
+                                <constraint firstAttribute="height" constant="34" id="fEy-6l-pnq"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mx1-dd-4bu">
+                            <rect key="frame" x="42" y="20.666666666666671" width="0.0" height="0.0"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="X0r-Br-wnB"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" id="tDr-cI-zfe"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="mx1-dd-4bu" secondAttribute="trailing" id="AWs-W3-bWn"/>
+                        <constraint firstItem="mx1-dd-4bu" firstAttribute="leading" secondItem="tSy-CR-oED" secondAttribute="trailing" constant="8" id="XxE-y7-UeJ"/>
+                        <constraint firstItem="mx1-dd-4bu" firstAttribute="centerY" secondItem="tSy-CR-oED" secondAttribute="centerY" id="hrZ-X2-Dz6"/>
+                        <constraint firstItem="tSy-CR-oED" firstAttribute="leading" secondItem="XZ6-mS-n7Q" secondAttribute="leading" id="k4D-FB-Dsi"/>
+                        <constraint firstItem="tSy-CR-oED" firstAttribute="centerY" secondItem="XZ6-mS-n7Q" secondAttribute="centerY" id="zNo-iF-Y9b"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="XZ6-mS-n7Q" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="RUI-p7-TqQ"/>
+                <constraint firstItem="XZ6-mS-n7Q" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="VXJ-MB-v80"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="XZ6-mS-n7Q" secondAttribute="bottom" priority="750" id="WzS-fE-Loa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="icon" destination="tSy-CR-oED" id="dAG-2B-4xh"/>
+                <outlet property="titleText" destination="mx1-dd-4bu" id="sbT-HW-eWH"/>
+                <outletCollection property="gestureRecognizers" destination="7iZ-TU-7Qm" appends="YES" id="Ml5-BY-a5M"/>
+            </connections>
+            <point key="canvasLocation" x="124" y="-5"/>
+        </view>
+        <tapGestureRecognizer id="7iZ-TU-7Qm">
+            <connections>
+                <action selector="channelViewTapAction:" destination="iN0-l3-epB" id="07j-wG-90M"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,25 @@
+{
+  "name": "AAINetwork",
+  "version": "1.0.1",
+  "summary": "A base network library that many AAI SDKs rely on",
+  "description": "A base network library that many AAI SDKs rely on.",
+  "homepage": "https://www.advance.ai",
+  "license": {
+    "type": "example",
+    "text": "                      \n"
+  },
+  "authors": "advance.ai",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source": {
+    "http": "https://your-host/AAINetwork-V1.0.1.zip"
+  },
+  "vendored_frameworks": "AAINetwork.xcframework",
+  "ios": {
+    "libraries": [
+      "c++",
+      "z"
+    ]
+  }
+}

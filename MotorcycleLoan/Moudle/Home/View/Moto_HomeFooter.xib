@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Moto_HomeFooter" customModule="MotorcycleLoan" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="466" height="506"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbQ-DO-gHV">
+                    <rect key="frame" x="13" y="75" width="440" height="110"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="110" id="BAu-a3-Vgq"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" tag="100" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jqn-CO-aXL">
+                    <rect key="frame" x="16" y="206" width="208" height="96"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" backgroundImage="mo_home_help_bg"/>
+                    <connections>
+                        <action selector="footerBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="8Gj-HD-rpK"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help Center" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rk8-sO-0ee">
+                    <rect key="frame" x="31" y="221" width="82" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" tag="200" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9r-pu-7kM">
+                    <rect key="frame" x="245" y="206" width="208" height="96"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" backgroundImage="mo_home_feedback_bg"/>
+                    <connections>
+                        <action selector="footerBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="QI3-uX-l7z"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFP-7N-3Kw">
+                    <rect key="frame" x="260" y="221" width="67.666666666666686" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RE-OC-43c">
+                    <rect key="frame" x="13" y="318" width="440" height="54"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="i6E-Gh-GCp"/>
+                    </constraints>
+                    <string key="text">Tips : Whether your loan application is approved or notdepends entirely on your credit accumulation, please repay on time and maintain good credit</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.63921568627450975" green="0.6588235294117647" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhY-hN-yIc">
+                    <rect key="frame" x="13" y="388" width="440" height="54"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="ucW-YV-7KA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.63921568630000003" green="0.6588235294" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="rk8-sO-0ee" firstAttribute="leading" secondItem="Jqn-CO-aXL" secondAttribute="leading" constant="15" id="3HC-Z1-Dkk"/>
+                <constraint firstItem="QFP-7N-3Kw" firstAttribute="top" secondItem="r9r-pu-7kM" secondAttribute="top" constant="15" id="3zw-ns-eAV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vbQ-DO-gHV" secondAttribute="trailing" constant="13" id="A8u-eI-OjC"/>
+                <constraint firstItem="GhY-hN-yIc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="13" id="FN8-Br-QFi"/>
+                <constraint firstItem="rk8-sO-0ee" firstAttribute="top" secondItem="Jqn-CO-aXL" secondAttribute="top" constant="15" id="JH9-vj-pBS"/>
+                <constraint firstItem="GhY-hN-yIc" firstAttribute="top" secondItem="6RE-OC-43c" secondAttribute="bottom" constant="16" id="KXA-Ak-kmc"/>
+                <constraint firstItem="6RE-OC-43c" firstAttribute="top" secondItem="Jqn-CO-aXL" secondAttribute="bottom" constant="16" id="Nhk-Nb-A7B"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="r9r-pu-7kM" secondAttribute="trailing" constant="13" id="T2a-JO-uTE"/>
+                <constraint firstItem="r9r-pu-7kM" firstAttribute="height" secondItem="Jqn-CO-aXL" secondAttribute="height" id="Tqh-zO-jsd"/>
+                <constraint firstItem="r9r-pu-7kM" firstAttribute="width" secondItem="Jqn-CO-aXL" secondAttribute="width" id="W7g-O1-t1e"/>
+                <constraint firstItem="Jqn-CO-aXL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="XMA-63-wsT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="GhY-hN-yIc" secondAttribute="bottom" priority="750" constant="30" id="XTG-zU-UIC"/>
+                <constraint firstItem="Jqn-CO-aXL" firstAttribute="top" secondItem="vbQ-DO-gHV" secondAttribute="bottom" constant="21" id="Xow-g6-1vU"/>
+                <constraint firstItem="vbQ-DO-gHV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="apq-fH-fmk"/>
+                <constraint firstItem="r9r-pu-7kM" firstAttribute="centerY" secondItem="Jqn-CO-aXL" secondAttribute="centerY" id="cFW-IH-4L3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GhY-hN-yIc" secondAttribute="trailing" constant="13" id="e8x-27-IvZ"/>
+                <constraint firstItem="QFP-7N-3Kw" firstAttribute="leading" secondItem="r9r-pu-7kM" secondAttribute="leading" constant="15" id="hyx-x8-fyI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6RE-OC-43c" secondAttribute="trailing" constant="13" id="k7C-GA-c3D"/>
+                <constraint firstItem="6RE-OC-43c" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="13" id="lUJ-54-NjB"/>
+                <constraint firstItem="r9r-pu-7kM" firstAttribute="leading" secondItem="Jqn-CO-aXL" secondAttribute="trailing" constant="21" id="pgD-WH-GNS"/>
+                <constraint firstItem="vbQ-DO-gHV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="13" id="seH-0T-bNy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bannerView" destination="vbQ-DO-gHV" id="ZLm-Jh-13v"/>
+                <outlet property="companyInfoText" destination="GhY-hN-yIc" id="eeP-73-Opt"/>
+            </connections>
+            <point key="canvasLocation" x="-179" y="115"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mo_home_feedback_bg" width="164" height="60"/>
+        <image name="mo_home_help_bg" width="164" height="60"/>
+    </resources>
+</document>

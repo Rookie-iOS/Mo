@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mo_lanuch_logo" translatesAutoresizingMaskIntoConstraints="NO" id="2TS-ol-zf9">
+                                <rect key="frame" x="156.66666666666666" y="159" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="M1T-8U-VzA"/>
+                                    <constraint firstAttribute="width" constant="80" id="YuT-JT-jg6"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MotorcycleLoan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycg-ql-aVH">
+                                <rect key="frame" x="121.00000000000001" y="259" width="151.33333333333337" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="OzY-c3-pc0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mo_lanuch_bottom" translatesAutoresizingMaskIntoConstraints="NO" id="SIt-97-CfS">
+                                <rect key="frame" x="0.0" y="607.66666666666663" width="393" height="244.33333333333337"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SIt-97-CfS" secondAttribute="height" multiplier="373:232" id="80n-TJ-y29"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.14509803921568626" green="0.37647058823529411" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ycg-ql-aVH" firstAttribute="top" secondItem="2TS-ol-zf9" secondAttribute="bottom" constant="20" id="SK6-kj-yo0"/>
+                            <constraint firstItem="2TS-ol-zf9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UPP-bn-IjN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SIt-97-CfS" secondAttribute="trailing" id="YDo-6R-Xih"/>
+                            <constraint firstAttribute="bottom" secondItem="SIt-97-CfS" secondAttribute="bottom" id="dTn-nS-9ND"/>
+                            <constraint firstItem="SIt-97-CfS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uLB-6l-wMM"/>
+                            <constraint firstItem="ycg-ql-aVH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uLV-Rk-zpe"/>
+                            <constraint firstItem="2TS-ol-zf9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="wll-Jz-03w"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mo_lanuch_bottom" width="375" height="232"/>
+        <image name="mo_lanuch_logo" width="80" height="80"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

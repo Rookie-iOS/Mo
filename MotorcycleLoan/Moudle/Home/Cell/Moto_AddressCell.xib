@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="moto_address_cell" id="KGk-i7-Jjw" customClass="Moto_AddressCell" customModule="MotorcycleLoan" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQC-vb-HwH">
+                        <rect key="frame" x="13" y="12" width="255" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="oQj-F2-uS8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gSZ-I4-Wny">
+                        <rect key="frame" x="283" y="10" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="Xfk-4e-ocn"/>
+                            <constraint firstAttribute="width" constant="24" id="dZA-3t-FSJ"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xQC-vb-HwH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Cvu-LV-pg4"/>
+                    <constraint firstItem="gSZ-I4-Wny" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="PfS-8g-91f"/>
+                    <constraint firstItem="xQC-vb-HwH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="Xfh-BQ-Y2O"/>
+                    <constraint firstItem="gSZ-I4-Wny" firstAttribute="leading" secondItem="xQC-vb-HwH" secondAttribute="trailing" constant="15" id="mj6-a8-BWz"/>
+                    <constraint firstAttribute="bottom" secondItem="xQC-vb-HwH" secondAttribute="bottom" priority="750" constant="12" id="nvl-Wo-NY8"/>
+                    <constraint firstAttribute="trailing" secondItem="gSZ-I4-Wny" secondAttribute="trailing" constant="13" id="sJK-D0-UhY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="checkIcon" destination="gSZ-I4-Wny" id="Omb-87-cvc"/>
+                <outlet property="titleText" destination="xQC-vb-HwH" id="F9p-lS-UaC"/>
+            </connections>
+            <point key="canvasLocation" x="73" y="20"/>
+        </tableViewCell>
+    </objects>
+</document>

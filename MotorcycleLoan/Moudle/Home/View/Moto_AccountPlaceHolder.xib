@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Moto_AccountPlaceHolder" customModule="MotorcycleLoan" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pZp-Yd-UPv">
+                    <rect key="frame" x="123.66666666666669" y="109" width="146" height="149"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="149" id="69w-eR-0dt"/>
+                        <constraint firstAttribute="width" constant="146" id="L9F-fm-2GI"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnc-3A-3Wd">
+                    <rect key="frame" x="196.66666666666666" y="288" width="0.0" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="VHJ-JG-7vS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.63921568630000003" green="0.6588235294" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JOp-7I-cib">
+                    <rect key="frame" x="13" y="356" width="367" height="44"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wSM-pD-e7D">
+                            <rect key="frame" x="145.66666666666666" y="0.0" width="76" height="44"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mo_add_account_icon" translatesAutoresizingMaskIntoConstraints="NO" id="wve-Un-ezR">
+                                    <rect key="frame" x="0.0" y="14" width="16" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="16" id="YHU-cS-fJU"/>
+                                        <constraint firstAttribute="width" constant="16" id="nA9-pt-bdG"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcE-bf-CUT">
+                                    <rect key="frame" x="26" y="0.0" width="50" height="44"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" red="0.1450980392" green="0.37647058820000001" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="CZr-gH-Qeb"/>
+                        <constraint firstItem="wSM-pD-e7D" firstAttribute="centerX" secondItem="JOp-7I-cib" secondAttribute="centerX" id="Fhf-xo-zME"/>
+                        <constraint firstAttribute="bottom" secondItem="wSM-pD-e7D" secondAttribute="bottom" id="UJl-7Z-99h"/>
+                        <constraint firstItem="wSM-pD-e7D" firstAttribute="top" secondItem="JOp-7I-cib" secondAttribute="top" id="fs3-QY-gm8"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="bV9-fo-sgI" appends="YES" id="P54-AN-TBw"/>
+                    </connections>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="JOp-7I-cib" firstAttribute="top" secondItem="mnc-3A-3Wd" secondAttribute="bottom" constant="50" id="2aK-eu-BOw"/>
+                <constraint firstItem="pZp-Yd-UPv" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="4nc-cl-6rD"/>
+                <constraint firstItem="mnc-3A-3Wd" firstAttribute="top" secondItem="pZp-Yd-UPv" secondAttribute="bottom" constant="30" id="PXx-Pt-Nm1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JOp-7I-cib" secondAttribute="trailing" constant="13" id="T5A-3T-DSh"/>
+                <constraint firstItem="JOp-7I-cib" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="13" id="VsE-uW-1zC"/>
+                <constraint firstItem="pZp-Yd-UPv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="bZd-yv-kmr"/>
+                <constraint firstItem="mnc-3A-3Wd" firstAttribute="centerX" secondItem="pZp-Yd-UPv" secondAttribute="centerX" id="wri-JB-W89"/>
+            </constraints>
+            <connections>
+                <outlet property="addText" destination="BcE-bf-CUT" id="qlI-eQ-YU3"/>
+                <outlet property="addView" destination="JOp-7I-cib" id="5qk-MF-eQN"/>
+                <outlet property="icon" destination="pZp-Yd-UPv" id="XAg-Wh-ahM"/>
+                <outlet property="iconHeight" destination="69w-eR-0dt" id="RTA-Vk-Gps"/>
+                <outlet property="iconWidth" destination="L9F-fm-2GI" id="76f-Qv-4lr"/>
+                <outlet property="tipsText" destination="mnc-3A-3Wd" id="Nb1-GR-3Me"/>
+            </connections>
+            <point key="canvasLocation" x="73" y="20"/>
+        </view>
+        <tapGestureRecognizer id="bV9-fo-sgI">
+            <connections>
+                <action selector="tapAction:" destination="iN0-l3-epB" id="X2L-2w-77z"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="mo_add_account_icon" width="16" height="16"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

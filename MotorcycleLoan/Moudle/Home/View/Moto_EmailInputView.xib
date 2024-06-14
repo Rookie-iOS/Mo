@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Moto_EmailInputView" customModule="MotorcycleLoan" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="392" height="227"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dtm-u0-RrX">
+                    <rect key="frame" x="13" y="74" width="0.0" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="I4v-b2-eOw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEA-so-VII">
+                    <rect key="frame" x="13" y="102" width="366" height="44"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please fill in" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3YY-Mh-dcw">
+                            <rect key="frame" x="10" y="0.0" width="346" height="44"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="3YY-Mh-dcw" firstAttribute="top" secondItem="LEA-so-VII" secondAttribute="top" id="IOQ-vK-YWS"/>
+                        <constraint firstAttribute="bottom" secondItem="3YY-Mh-dcw" secondAttribute="bottom" id="Rgy-Yj-3dK"/>
+                        <constraint firstItem="3YY-Mh-dcw" firstAttribute="leading" secondItem="LEA-so-VII" secondAttribute="leading" constant="10" id="geg-eD-Zn8"/>
+                        <constraint firstAttribute="height" constant="44" id="vaC-LK-QBI"/>
+                        <constraint firstAttribute="trailing" secondItem="3YY-Mh-dcw" secondAttribute="trailing" constant="10" id="yWh-sp-jZY"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mlb-bc-frZ" customClass="MO_EmailTipsView" customModule="MotorcycleLoan" customModuleProvider="target">
+                    <rect key="frame" x="13" y="157" width="366" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email is used for offline withdrawal, Please fill in accurately！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1D3-yM-SLT">
+                            <rect key="frame" x="12" y="0.0" width="342" height="44"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.1450980392" green="0.37647058820000001" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="1ep-Wi-w7j"/>
+                        <constraint firstItem="1D3-yM-SLT" firstAttribute="leading" secondItem="Mlb-bc-frZ" secondAttribute="leading" constant="12" id="Gja-0I-zg8"/>
+                        <constraint firstAttribute="trailing" secondItem="1D3-yM-SLT" secondAttribute="trailing" constant="12" id="bEU-dV-aGA"/>
+                        <constraint firstAttribute="bottom" secondItem="1D3-yM-SLT" secondAttribute="bottom" id="lw2-kn-s8u"/>
+                        <constraint firstItem="1D3-yM-SLT" firstAttribute="top" secondItem="Mlb-bc-frZ" secondAttribute="top" id="xsI-67-OuZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Mlb-bc-frZ" secondAttribute="trailing" constant="13" id="4Sw-rk-aLN"/>
+                <constraint firstItem="Dtm-u0-RrX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="13" id="4V7-Pp-ZQs"/>
+                <constraint firstItem="LEA-so-VII" firstAttribute="top" secondItem="Dtm-u0-RrX" secondAttribute="bottom" constant="10" id="4zv-xL-TKU"/>
+                <constraint firstItem="LEA-so-VII" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="13" id="7ca-5S-foh"/>
+                <constraint firstItem="Dtm-u0-RrX" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="IgJ-9x-Mq7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LEA-so-VII" secondAttribute="trailing" constant="13" id="J94-6e-ASw"/>
+                <constraint firstItem="Mlb-bc-frZ" firstAttribute="top" secondItem="LEA-so-VII" secondAttribute="bottom" constant="11" id="bML-wY-cxL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Mlb-bc-frZ" secondAttribute="bottom" priority="750" id="hjx-vC-dsL"/>
+                <constraint firstItem="Mlb-bc-frZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="13" id="wHz-yf-aoK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="inputBgView" destination="LEA-so-VII" id="483-WR-9nu"/>
+                <outlet property="inputText" destination="3YY-Mh-dcw" id="hXF-3G-Ntd"/>
+                <outlet property="titleText" destination="Dtm-u0-RrX" id="epM-EN-zWM"/>
+            </connections>
+            <point key="canvasLocation" x="-94.656488549618317" y="-638.38028169014092"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

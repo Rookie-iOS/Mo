@@ -1,0 +1,1662 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63DA10840609969F038D63DF /* Pods_MotorcycleLoan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B65BE01BC84C855F6BC4CC7 /* Pods_MotorcycleLoan.framework */; };
+		94C3D6C63507D253535EC6F8 /* Pods_MotorcycleLoanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F2193097055AB0E7DA4366 /* Pods_MotorcycleLoanTests.framework */; };
+		D90937432C105FA700B5B69F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90937422C105FA700B5B69F /* AppDelegate.swift */; };
+		D90937452C105FA700B5B69F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90937442C105FA700B5B69F /* SceneDelegate.swift */; };
+		D90937472C105FA700B5B69F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90937462C105FA700B5B69F /* ViewController.swift */; };
+		D909374A2C105FA700B5B69F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D90937492C105FA700B5B69F /* Base */; };
+		D909374C2C105FA800B5B69F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D909374B2C105FA800B5B69F /* Assets.xcassets */; };
+		D909374F2C105FA800B5B69F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D909374E2C105FA800B5B69F /* Base */; };
+		D909375A2C105FA800B5B69F /* MotorcycleLoanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90937592C105FA800B5B69F /* MotorcycleLoanTests.swift */; };
+		D90937642C105FA800B5B69F /* MotorcycleLoanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90937632C105FA800B5B69F /* MotorcycleLoanUITests.swift */; };
+		D90937662C105FA800B5B69F /* MotorcycleLoanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90937652C105FA800B5B69F /* MotorcycleLoanUITestsLaunchTests.swift */; };
+		D90937792C10692900B5B69F /* mo_address_data in Resources */ = {isa = PBXBuildFile; fileRef = D90937782C10692900B5B69F /* mo_address_data */; };
+		D909377B2C106A1C00B5B69F /* html in Resources */ = {isa = PBXBuildFile; fileRef = D909377A2C106A1C00B5B69F /* html */; };
+		D90937802C106B7400B5B69F /* Moto_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D909377F2C106B7400B5B69F /* Moto_ViewController.swift */; };
+		D90937822C106C0700B5B69F /* Moto_NavigatonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90937812C106C0700B5B69F /* Moto_NavigatonController.swift */; };
+		D90937842C106CFE00B5B69F /* Moto_TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90937832C106CFE00B5B69F /* Moto_TabBarController.swift */; };
+		D90FFA0D2C1615D000347913 /* Moto_IdentityCacheModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90FFA0C2C1615D000347913 /* Moto_IdentityCacheModel.swift */; };
+		D90FFA112C16182A00347913 /* Moto_SelectInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90FFA102C16182A00347913 /* Moto_SelectInfoView.swift */; };
+		D90FFA132C16184200347913 /* Moto_SelectInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90FFA122C16184200347913 /* Moto_SelectInfoView.xib */; };
+		D90FFA192C161E5200347913 /* Moto_LoanSmsCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90FFA182C161E5200347913 /* Moto_LoanSmsCodeView.swift */; };
+		D90FFA1B2C161E6400347913 /* Moto_LoanSmsCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90FFA1A2C161E6400347913 /* Moto_LoanSmsCodeView.xib */; };
+		D90FFA1D2C161FFA00347913 /* Moto_ServiceFeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90FFA1C2C161FFA00347913 /* Moto_ServiceFeeView.swift */; };
+		D90FFA1F2C16200800347913 /* Moto_ServiceFeeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90FFA1E2C16200800347913 /* Moto_ServiceFeeView.xib */; };
+		D90FFA212C16214100347913 /* Moto_PreAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90FFA202C16214100347913 /* Moto_PreAuthViewController.swift */; };
+		D90FFA232C16250000347913 /* Moto_AuthCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90FFA222C16250000347913 /* Moto_AuthCenterViewController.swift */; };
+		D90FFA252C16278E00347913 /* Moto_AuthStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90FFA242C16278E00347913 /* Moto_AuthStatusModel.swift */; };
+		D90FFA272C162A9300347913 /* Moto_BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90FFA262C162A9300347913 /* Moto_BasicViewController.swift */; };
+		D90FFA292C162B2300347913 /* Moto_IdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90FFA282C162B2300347913 /* Moto_IdentityViewController.swift */; };
+		D91F9CC32C1589640081FE59 /* Moto_PreliminaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91F9CC22C1589640081FE59 /* Moto_PreliminaryViewController.swift */; };
+		D92188C92C16FCDA00407EEE /* Moto_AddressInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92188C82C16FCDA00407EEE /* Moto_AddressInfoViewController.swift */; };
+		D92188CB2C16FD4C00407EEE /* Moto_AddressSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92188CA2C16FD4C00407EEE /* Moto_AddressSelectViewController.swift */; };
+		D92188CE2C1700ED00407EEE /* Moto_AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92188CC2C1700ED00407EEE /* Moto_AddressCell.swift */; };
+		D92188CF2C1700ED00407EEE /* Moto_AddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92188CD2C1700ED00407EEE /* Moto_AddressCell.xib */; };
+		D92188D12C1705C300407EEE /* Moto_ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92188D02C1705C300407EEE /* Moto_ContactViewController.swift */; };
+		D92188D32C17375C00407EEE /* Moto_ContactCacheModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92188D22C17375C00407EEE /* Moto_ContactCacheModel.swift */; };
+		D92188D52C1738F400407EEE /* Moto_ContactInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92188D42C1738F400407EEE /* Moto_ContactInfoView.swift */; };
+		D92188D72C17390800407EEE /* Moto_ContactInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92188D62C17390800407EEE /* Moto_ContactInfoView.xib */; };
+		D92188D92C173F6D00407EEE /* Moto_FaceDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92188D82C173F6D00407EEE /* Moto_FaceDataModel.swift */; };
+		D92188DB2C1740BD00407EEE /* Moto_RollBackFillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92188DA2C1740BD00407EEE /* Moto_RollBackFillModel.swift */; };
+		D92188DD2C17412D00407EEE /* Moto_CardOcrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92188DC2C17412D00407EEE /* Moto_CardOcrModel.swift */; };
+		D92188DF2C1741BD00407EEE /* Moto_IdentityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92188DE2C1741BD00407EEE /* Moto_IdentityView.swift */; };
+		D92188E12C1741CF00407EEE /* Moto_IdentityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92188E02C1741CF00407EEE /* Moto_IdentityView.xib */; };
+		D92188E32C1743F900407EEE /* Moto_BrithDayPickerSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92188E22C1743F900407EEE /* Moto_BrithDayPickerSelectView.swift */; };
+		D92188E52C17440C00407EEE /* Moto_BrithDayPickerSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92188E42C17440C00407EEE /* Moto_BrithDayPickerSelectView.xib */; };
+		D92188E72C17456900407EEE /* Moto_GenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92188E62C17456900407EEE /* Moto_GenderView.swift */; };
+		D92188E92C17457600407EEE /* Moto_GenderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92188E82C17457600407EEE /* Moto_GenderView.xib */; };
+		D92188EB2C17479F00407EEE /* Moto_FaceOcrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92188EA2C17479F00407EEE /* Moto_FaceOcrViewController.swift */; };
+		D92188ED2C17481F00407EEE /* Moto_CustomPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92188EC2C17481F00407EEE /* Moto_CustomPhotoController.swift */; };
+		D92188EF2C17542100407EEE /* Moto_RepayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92188EE2C17542100407EEE /* Moto_RepayViewController.swift */; };
+		D92188F12C1759C300407EEE /* Moto_RepaytermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92188F02C1759C300407EEE /* Moto_RepaytermView.swift */; };
+		D92188F32C1759DD00407EEE /* Moto_RepaytermView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92188F22C1759DD00407EEE /* Moto_RepaytermView.xib */; };
+		D92188F52C175CC500407EEE /* Moto_RepayTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92188F42C175CC500407EEE /* Moto_RepayTipsView.swift */; };
+		D92188F72C175CEB00407EEE /* Moto_RepayTipsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92188F62C175CEB00407EEE /* Moto_RepayTipsView.xib */; };
+		D92188F92C175E6400407EEE /* Moto_FullPayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92188F82C175E6400407EEE /* Moto_FullPayView.swift */; };
+		D92188FB2C175E8400407EEE /* Moto_FullPayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92188FA2C175E8400407EEE /* Moto_FullPayView.xib */; };
+		D92188FD2C175FAB00407EEE /* Moto_RepaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92188FC2C175FAB00407EEE /* Moto_RepaymentViewController.swift */; };
+		D92188FF2C17617300407EEE /* Moto_RepaymentMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92188FE2C17617300407EEE /* Moto_RepaymentMethodModel.swift */; };
+		D92189012C17627200407EEE /* Moto_RepaymentMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92189002C17627200407EEE /* Moto_RepaymentMethodView.swift */; };
+		D92189032C17628F00407EEE /* Moto_RepaymentMethodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92189022C17628F00407EEE /* Moto_RepaymentMethodView.xib */; };
+		D92189052C1763C900407EEE /* Moto_RepayChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92189042C1763C900407EEE /* Moto_RepayChannelView.swift */; };
+		D92189072C1763E600407EEE /* Moto_RepayChannelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92189062C1763E600407EEE /* Moto_RepayChannelView.xib */; };
+		D92189092C17654700407EEE /* Moto_PayChannelCheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92189082C17654700407EEE /* Moto_PayChannelCheckModel.swift */; };
+		D921890B2C1767A600407EEE /* Moto_LoanRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D921890A2C1767A600407EEE /* Moto_LoanRecordViewController.swift */; };
+		D921890E2C17686200407EEE /* Moto_LoanRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D921890C2C17686200407EEE /* Moto_LoanRecordCell.swift */; };
+		D921890F2C17686200407EEE /* Moto_LoanRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D921890D2C17686200407EEE /* Moto_LoanRecordCell.xib */; };
+		D92189112C17699F00407EEE /* Moto_LoanRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92189102C17699F00407EEE /* Moto_LoanRecordModel.swift */; };
+		D92189132C176A6700407EEE /* Moto_LoanRecordPlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92189122C176A6700407EEE /* Moto_LoanRecordPlaceHolder.swift */; };
+		D92189152C176A7E00407EEE /* Moto_LoanRecordPlaceHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92189142C176A7E00407EEE /* Moto_LoanRecordPlaceHolder.xib */; };
+		D92189172C176B7F00407EEE /* Moto_SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92189162C176B7F00407EEE /* Moto_SetupViewController.swift */; };
+		D92189192C176D2B00407EEE /* Moto_ChangeMobileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92189182C176D2B00407EEE /* Moto_ChangeMobileViewController.swift */; };
+		D921891B2C176FBB00407EEE /* Moto_ChangeMobileSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D921891A2C176FBB00407EEE /* Moto_ChangeMobileSuccessViewController.swift */; };
+		D921891D2C1771DF00407EEE /* Moto_DeleteAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D921891C2C1771DF00407EEE /* Moto_DeleteAccountViewController.swift */; };
+		D921891F2C17724B00407EEE /* Moto_AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D921891E2C17724B00407EEE /* Moto_AboutViewController.swift */; };
+		D92189212C17742200407EEE /* Moto_InputPassWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92189202C17742200407EEE /* Moto_InputPassWordView.swift */; };
+		D92189232C17743E00407EEE /* Moto_InputPassWordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92189222C17743E00407EEE /* Moto_InputPassWordView.xib */; };
+		D92189252C1775C900407EEE /* Moto_ChangeMobileFailureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92189242C1775C900407EEE /* Moto_ChangeMobileFailureViewController.swift */; };
+		D929664D2C1A9C4700906558 /* Moto_LoanTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D929664C2C1A9C4700906558 /* Moto_LoanTipsView.swift */; };
+		D929664F2C1A9C6500906558 /* Moto_LoanTipsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D929664E2C1A9C6500906558 /* Moto_LoanTipsView.xib */; };
+		D9445D212C1945C20020143B /* Moto_RepayUrlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9445D202C1945C20020143B /* Moto_RepayUrlModel.swift */; };
+		D96ACB042C15DF5F0065C622 /* Moto_LoanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96ACB032C15DF5F0065C622 /* Moto_LoanViewController.swift */; };
+		D96ACB062C15E0760065C622 /* Moto_LoanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96ACB052C15E0760065C622 /* Moto_LoanModel.swift */; };
+		D96ACB082C15E41D0065C622 /* Moto_LoanDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96ACB072C15E41D0065C622 /* Moto_LoanDetailModel.swift */; };
+		D96ACB0A2C15E58B0065C622 /* Moto_LoanAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96ACB092C15E58B0065C622 /* Moto_LoanAccountModel.swift */; };
+		D96ACB0C2C15E7B90065C622 /* Moto_LoanRepayItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96ACB0B2C15E7B90065C622 /* Moto_LoanRepayItemView.swift */; };
+		D96ACB0E2C15E7D30065C622 /* Moto_LoanRepayItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D96ACB0D2C15E7D30065C622 /* Moto_LoanRepayItemView.xib */; };
+		D96ACB102C15EA850065C622 /* Moto_LoanSuccessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96ACB0F2C15EA850065C622 /* Moto_LoanSuccessModel.swift */; };
+		D96ACB122C15EB8E0065C622 /* Moto_OneBtnPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96ACB112C15EB8E0065C622 /* Moto_OneBtnPopView.swift */; };
+		D96ACB142C15EBBC0065C622 /* Moto_OneBtnPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D96ACB132C15EBBC0065C622 /* Moto_OneBtnPopView.xib */; };
+		D96ACB162C15F57C0065C622 /* Moto_ReLoanPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96ACB152C15F57C0065C622 /* Moto_ReLoanPopView.swift */; };
+		D96ACB182C15F58D0065C622 /* Moto_ReLoanPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D96ACB172C15F58D0065C622 /* Moto_ReLoanPopView.xib */; };
+		D96ACB1A2C15F7FE0065C622 /* Moto_WithdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96ACB192C15F7FE0065C622 /* Moto_WithdrawViewController.swift */; };
+		D96ACB1C2C15FC300065C622 /* Moto_AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96ACB1B2C15FC300065C622 /* Moto_AccountListViewController.swift */; };
+		D96ACB1E2C15FDFE0065C622 /* Moto_UserAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96ACB1D2C15FDFE0065C622 /* Moto_UserAccountModel.swift */; };
+		D96ACB202C15FEAA0065C622 /* Moto_AccountPlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96ACB1F2C15FEAA0065C622 /* Moto_AccountPlaceHolder.swift */; };
+		D96ACB222C15FECA0065C622 /* Moto_AccountPlaceHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = D96ACB212C15FECA0065C622 /* Moto_AccountPlaceHolder.xib */; };
+		D96ACB252C1604F60065C622 /* Moto_UserAccountListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D96ACB242C1604F60065C622 /* Moto_UserAccountListCell.xib */; };
+		D96ACB262C1604F60065C622 /* Moto_UserAccountListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96ACB232C1604F60065C622 /* Moto_UserAccountListCell.swift */; };
+		D96ACB282C160C9E0065C622 /* Moto_AddUserAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96ACB272C160C9E0065C622 /* Moto_AddUserAccountViewController.swift */; };
+		D96ACB2A2C1611790065C622 /* Moto_SelectInputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96ACB292C1611790065C622 /* Moto_SelectInputModel.swift */; };
+		D96ACB2C2C16120E0065C622 /* Moto_AccountOrgNameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96ACB2B2C16120E0065C622 /* Moto_AccountOrgNameModel.swift */; };
+		D96ACB2E2C1613400065C622 /* Moto_UserNameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96ACB2D2C1613400065C622 /* Moto_UserNameModel.swift */; };
+		D96ACB302C1613B50065C622 /* Moto_SelectInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96ACB2F2C1613B50065C622 /* Moto_SelectInputView.swift */; };
+		D96ACB322C1613CC0065C622 /* Moto_SelectInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D96ACB312C1613CC0065C622 /* Moto_SelectInputView.xib */; };
+		D97570C32C148CD100E1D435 /* Moto_HomeInViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D97570C22C148CD100E1D435 /* Moto_HomeInViewCell.xib */; };
+		D97570C42C148CD100E1D435 /* Moto_HomeRepayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97570C12C148CD100E1D435 /* Moto_HomeRepayCell.swift */; };
+		D985000D2C10A5D300474CFF /* Moto_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D985000C2C10A5D300474CFF /* Moto_Utils.swift */; };
+		D98500112C10A86700474CFF /* Moto_LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98500102C10A86700474CFF /* Moto_LoginModel.swift */; };
+		D98500142C10ADA300474CFF /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98500132C10ADA300474CFF /* View+Ext.swift */; };
+		D98500162C10AED400474CFF /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98500152C10AED400474CFF /* String+Ext.swift */; };
+		D98500182C10AF2600474CFF /* Device+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98500172C10AF2600474CFF /* Device+Ext.swift */; };
+		D985001A2C10B29200474CFF /* Moto_Apis.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98500192C10B29200474CFF /* Moto_Apis.swift */; };
+		D985001C2C10B3CC00474CFF /* Moto_Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D985001B2C10B3CC00474CFF /* Moto_Networking.swift */; };
+		D985001E2C10B4E600474CFF /* Moto_BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D985001D2C10B4E600474CFF /* Moto_BaseModel.swift */; };
+		D98500212C10B69E00474CFF /* Moto_AddressParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98500202C10B69E00474CFF /* Moto_AddressParse.swift */; };
+		D98500232C10B79100474CFF /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98500222C10B79100474CFF /* R.generated.swift */; };
+		D98500252C10B7DA00474CFF /* Moto_Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98500242C10B7DA00474CFF /* Moto_Const.swift */; };
+		D98500272C10B87300474CFF /* Moto_UploadRisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98500262C10B87300474CFF /* Moto_UploadRisk.swift */; };
+		D98500292C114E8300474CFF /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D98500282C114E8300474CFF /* Mine.storyboard */; };
+		D985002B2C114EAB00474CFF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D985002A2C114EAB00474CFF /* Home.storyboard */; };
+		D985002E2C11514400474CFF /* Moto_HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D985002D2C11514400474CFF /* Moto_HomeViewController.swift */; };
+		D98500312C11539300474CFF /* Moto_MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98500302C11539300474CFF /* Moto_MineViewController.swift */; };
+		D987FCD52C16D4D600464859 /* Moto_CacheModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987FCD42C16D4D600464859 /* Moto_CacheModel.swift */; };
+		D987FCD72C16D54E00464859 /* Moto_InfoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987FCD62C16D54E00464859 /* Moto_InfoListModel.swift */; };
+		D987FCD92C16D60E00464859 /* Moto_AutoFillEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987FCD82C16D60E00464859 /* Moto_AutoFillEmailView.swift */; };
+		D987FCDB2C16D61E00464859 /* Moto_AutoFillEmailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D987FCDA2C16D61E00464859 /* Moto_AutoFillEmailView.xib */; };
+		D987FCDD2C16D8DE00464859 /* Moto_EmailInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987FCDC2C16D8DE00464859 /* Moto_EmailInputView.swift */; };
+		D987FCDF2C16D8F400464859 /* Moto_EmailInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D987FCDE2C16D8F400464859 /* Moto_EmailInputView.xib */; };
+		D987FCE12C16DB2F00464859 /* Moto_CancelPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987FCE02C16DB2F00464859 /* Moto_CancelPopView.swift */; };
+		D987FCE32C16DB3A00464859 /* Moto_CancelPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D987FCE22C16DB3A00464859 /* Moto_CancelPopView.xib */; };
+		D987FCE52C16DDEE00464859 /* Moto_JobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987FCE42C16DDEE00464859 /* Moto_JobViewController.swift */; };
+		D994C4A42C12F75A0074A0F0 /* Moto_HomeMarqueeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D994C4A32C12F75A0074A0F0 /* Moto_HomeMarqueeCell.swift */; };
+		D994C4A72C12F81F0074A0F0 /* Moto_HomeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D994C4A62C12F81F0074A0F0 /* Moto_HomeDataModel.swift */; };
+		D994C4AA2C12FDD20074A0F0 /* Moto_HomeInitalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D994C4A92C12FDD20074A0F0 /* Moto_HomeInitalCell.xib */; };
+		D994C4AB2C12FDD20074A0F0 /* Moto_HomeInitalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D994C4A82C12FDD20074A0F0 /* Moto_HomeInitalCell.swift */; };
+		D994C4AD2C1309AD0074A0F0 /* Moto_CornerRaduisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D994C4AC2C1309AD0074A0F0 /* Moto_CornerRaduisView.swift */; };
+		D994C4B02C130D630074A0F0 /* Moto_LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D994C4AF2C130D630074A0F0 /* Moto_LoginViewController.swift */; };
+		D994C4B32C1319170074A0F0 /* Moto_LoginCheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D994C4B22C1319170074A0F0 /* Moto_LoginCheckModel.swift */; };
+		D994C4B52C1321000074A0F0 /* Moto_HomeRepayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D994C4B42C1321000074A0F0 /* Moto_HomeRepayModel.swift */; };
+		D994C4B82C1342AB0074A0F0 /* Moto_HomeStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D994C4B72C1342AB0074A0F0 /* Moto_HomeStatusCell.xib */; };
+		D994C4B92C1342AB0074A0F0 /* Moto_HomeStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D994C4B62C1342AB0074A0F0 /* Moto_HomeStatusCell.swift */; };
+		D994C4BC2C14313F0074A0F0 /* Moto_HomeRepayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D994C4BB2C14313F0074A0F0 /* Moto_HomeRepayCell.xib */; };
+		D994C4BD2C14313F0074A0F0 /* Moto_HomeInViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D994C4BA2C14313F0074A0F0 /* Moto_HomeInViewCell.swift */; };
+		D9C667A12C15725400FA448D /* Moto_SetPasswdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C667A02C15725400FA448D /* Moto_SetPasswdViewController.swift */; };
+		D9C6D2B52C12ACBF0077F448 /* Moto_FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C6D2B42C12ACBF0077F448 /* Moto_FeedViewController.swift */; };
+		D9C6D2B72C12B2690077F448 /* Moto_FeedProViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C6D2B62C12B2690077F448 /* Moto_FeedProViewController.swift */; };
+		D9C6D2B92C12B27F0077F448 /* Moto_FeedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C6D2B82C12B27F0077F448 /* Moto_FeedCollectionViewController.swift */; };
+		D9C6D2BC2C12DFEE0077F448 /* Moto_FeedSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C6D2BB2C12DFEE0077F448 /* Moto_FeedSelectView.swift */; };
+		D9C6D2BE2C12DFFC0077F448 /* Moto_FeedSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9C6D2BD2C12DFFC0077F448 /* Moto_FeedSelectView.xib */; };
+		D9C6D2C12C12E5A90077F448 /* Moto_SelectInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C6D2C02C12E5A90077F448 /* Moto_SelectInfoModel.swift */; };
+		D9C6D2C52C12E6A40077F448 /* Moto_SelectInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9C6D2C42C12E6A40077F448 /* Moto_SelectInfoCell.xib */; };
+		D9C6D2C62C12E6A40077F448 /* Moto_SelectInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C6D2C32C12E6A40077F448 /* Moto_SelectInfoCell.swift */; };
+		D9D301FB2C155866004356C2 /* Moto_ForgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D301FA2C155866004356C2 /* Moto_ForgetViewController.swift */; };
+		D9D301FD2C1558C6004356C2 /* Moto_RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D301FC2C1558C6004356C2 /* Moto_RegisterViewController.swift */; };
+		D9D655E82C11910B00741DD7 /* Moto_HomeFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9D655E72C11910B00741DD7 /* Moto_HomeFooter.xib */; };
+		D9D655EB2C1192EC00741DD7 /* Moto_HomeBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D655EA2C1192EC00741DD7 /* Moto_HomeBanner.swift */; };
+		D9D655ED2C11948100741DD7 /* Moto_WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D655EC2C11948100741DD7 /* Moto_WebViewController.swift */; };
+		D9F0DC842C1AFF3F006246CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9F0DC832C1AFF3F006246CC /* GoogleService-Info.plist */; };
+		D9F7C2C32C1188C5007CC599 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9F7C2C22C1188C5007CC599 /* Register.storyboard */; };
+		D9F7C2C62C118A38007CC599 /* Moto_BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7C2C52C118A38007CC599 /* Moto_BaseView.swift */; };
+		D9F7C2C92C118B51007CC599 /* Moto_HomeFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7C2C82C118B51007CC599 /* Moto_HomeFooter.swift */; };
+		FBAD10D006B6F2DC00D352E7 /* Pods_MotorcycleLoan_MotorcycleLoanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119E7D39D5187724C0FDAAB1 /* Pods_MotorcycleLoan_MotorcycleLoanUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D90937562C105FA800B5B69F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90937372C105FA700B5B69F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D909373E2C105FA700B5B69F;
+			remoteInfo = MotorcycleLoan;
+		};
+		D90937602C105FA800B5B69F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90937372C105FA700B5B69F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D909373E2C105FA700B5B69F;
+			remoteInfo = MotorcycleLoan;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		119E7D39D5187724C0FDAAB1 /* Pods_MotorcycleLoan_MotorcycleLoanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotorcycleLoan_MotorcycleLoanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BA8CF05A1F9D68544638FD7 /* Pods-MotorcycleLoan-MotorcycleLoanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorcycleLoan-MotorcycleLoanUITests.release.xcconfig"; path = "Target Support Files/Pods-MotorcycleLoan-MotorcycleLoanUITests/Pods-MotorcycleLoan-MotorcycleLoanUITests.release.xcconfig"; sourceTree = "<group>"; };
+		38BADF1FADF68B94A4E68B55 /* Pods-MotorcycleLoan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorcycleLoan.debug.xcconfig"; path = "Target Support Files/Pods-MotorcycleLoan/Pods-MotorcycleLoan.debug.xcconfig"; sourceTree = "<group>"; };
+		630C1BDDD2383C1DAFE448B7 /* Pods-MotorcycleLoan-MotorcycleLoanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorcycleLoan-MotorcycleLoanUITests.debug.xcconfig"; path = "Target Support Files/Pods-MotorcycleLoan-MotorcycleLoanUITests/Pods-MotorcycleLoan-MotorcycleLoanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6B65BE01BC84C855F6BC4CC7 /* Pods_MotorcycleLoan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotorcycleLoan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		800DD36EAA34F48DFF3A6DFD /* Pods-MotorcycleLoan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorcycleLoan.release.xcconfig"; path = "Target Support Files/Pods-MotorcycleLoan/Pods-MotorcycleLoan.release.xcconfig"; sourceTree = "<group>"; };
+		9EDF6F14B2282561BEECB252 /* Pods-MotorcycleLoanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorcycleLoanTests.release.xcconfig"; path = "Target Support Files/Pods-MotorcycleLoanTests/Pods-MotorcycleLoanTests.release.xcconfig"; sourceTree = "<group>"; };
+		B0F2193097055AB0E7DA4366 /* Pods_MotorcycleLoanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotorcycleLoanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D909373F2C105FA700B5B69F /* MotorcycleLoan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotorcycleLoan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D90937422C105FA700B5B69F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D90937442C105FA700B5B69F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D90937462C105FA700B5B69F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D90937492C105FA700B5B69F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D909374B2C105FA800B5B69F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D909374E2C105FA800B5B69F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D90937502C105FA800B5B69F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D90937552C105FA800B5B69F /* MotorcycleLoanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotorcycleLoanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D90937592C105FA800B5B69F /* MotorcycleLoanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleLoanTests.swift; sourceTree = "<group>"; };
+		D909375F2C105FA800B5B69F /* MotorcycleLoanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotorcycleLoanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D90937632C105FA800B5B69F /* MotorcycleLoanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleLoanUITests.swift; sourceTree = "<group>"; };
+		D90937652C105FA800B5B69F /* MotorcycleLoanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleLoanUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D90937782C10692900B5B69F /* mo_address_data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mo_address_data; sourceTree = "<group>"; };
+		D909377A2C106A1C00B5B69F /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; name = html; path = MotorcycleLoan/Resource/html; sourceTree = SOURCE_ROOT; };
+		D909377F2C106B7400B5B69F /* Moto_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_ViewController.swift; sourceTree = "<group>"; };
+		D90937812C106C0700B5B69F /* Moto_NavigatonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_NavigatonController.swift; sourceTree = "<group>"; };
+		D90937832C106CFE00B5B69F /* Moto_TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_TabBarController.swift; sourceTree = "<group>"; };
+		D90FFA0C2C1615D000347913 /* Moto_IdentityCacheModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_IdentityCacheModel.swift; sourceTree = "<group>"; };
+		D90FFA102C16182A00347913 /* Moto_SelectInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_SelectInfoView.swift; sourceTree = "<group>"; };
+		D90FFA122C16184200347913 /* Moto_SelectInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_SelectInfoView.xib; sourceTree = "<group>"; };
+		D90FFA182C161E5200347913 /* Moto_LoanSmsCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_LoanSmsCodeView.swift; sourceTree = "<group>"; };
+		D90FFA1A2C161E6400347913 /* Moto_LoanSmsCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_LoanSmsCodeView.xib; sourceTree = "<group>"; };
+		D90FFA1C2C161FFA00347913 /* Moto_ServiceFeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_ServiceFeeView.swift; sourceTree = "<group>"; };
+		D90FFA1E2C16200800347913 /* Moto_ServiceFeeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_ServiceFeeView.xib; sourceTree = "<group>"; };
+		D90FFA202C16214100347913 /* Moto_PreAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_PreAuthViewController.swift; sourceTree = "<group>"; };
+		D90FFA222C16250000347913 /* Moto_AuthCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_AuthCenterViewController.swift; sourceTree = "<group>"; };
+		D90FFA242C16278E00347913 /* Moto_AuthStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_AuthStatusModel.swift; sourceTree = "<group>"; };
+		D90FFA262C162A9300347913 /* Moto_BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_BasicViewController.swift; sourceTree = "<group>"; };
+		D90FFA282C162B2300347913 /* Moto_IdentityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_IdentityViewController.swift; sourceTree = "<group>"; };
+		D91F9CC22C1589640081FE59 /* Moto_PreliminaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_PreliminaryViewController.swift; sourceTree = "<group>"; };
+		D92188C82C16FCDA00407EEE /* Moto_AddressInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_AddressInfoViewController.swift; sourceTree = "<group>"; };
+		D92188CA2C16FD4C00407EEE /* Moto_AddressSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_AddressSelectViewController.swift; sourceTree = "<group>"; };
+		D92188CC2C1700ED00407EEE /* Moto_AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_AddressCell.swift; sourceTree = "<group>"; };
+		D92188CD2C1700ED00407EEE /* Moto_AddressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_AddressCell.xib; sourceTree = "<group>"; };
+		D92188D02C1705C300407EEE /* Moto_ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_ContactViewController.swift; sourceTree = "<group>"; };
+		D92188D22C17375C00407EEE /* Moto_ContactCacheModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_ContactCacheModel.swift; sourceTree = "<group>"; };
+		D92188D42C1738F400407EEE /* Moto_ContactInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_ContactInfoView.swift; sourceTree = "<group>"; };
+		D92188D62C17390800407EEE /* Moto_ContactInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_ContactInfoView.xib; sourceTree = "<group>"; };
+		D92188D82C173F6D00407EEE /* Moto_FaceDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_FaceDataModel.swift; sourceTree = "<group>"; };
+		D92188DA2C1740BD00407EEE /* Moto_RollBackFillModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_RollBackFillModel.swift; sourceTree = "<group>"; };
+		D92188DC2C17412D00407EEE /* Moto_CardOcrModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_CardOcrModel.swift; sourceTree = "<group>"; };
+		D92188DE2C1741BD00407EEE /* Moto_IdentityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_IdentityView.swift; sourceTree = "<group>"; };
+		D92188E02C1741CF00407EEE /* Moto_IdentityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_IdentityView.xib; sourceTree = "<group>"; };
+		D92188E22C1743F900407EEE /* Moto_BrithDayPickerSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_BrithDayPickerSelectView.swift; sourceTree = "<group>"; };
+		D92188E42C17440C00407EEE /* Moto_BrithDayPickerSelectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_BrithDayPickerSelectView.xib; sourceTree = "<group>"; };
+		D92188E62C17456900407EEE /* Moto_GenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_GenderView.swift; sourceTree = "<group>"; };
+		D92188E82C17457600407EEE /* Moto_GenderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_GenderView.xib; sourceTree = "<group>"; };
+		D92188EA2C17479F00407EEE /* Moto_FaceOcrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_FaceOcrViewController.swift; sourceTree = "<group>"; };
+		D92188EC2C17481F00407EEE /* Moto_CustomPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_CustomPhotoController.swift; sourceTree = "<group>"; };
+		D92188EE2C17542100407EEE /* Moto_RepayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_RepayViewController.swift; sourceTree = "<group>"; };
+		D92188F02C1759C300407EEE /* Moto_RepaytermView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_RepaytermView.swift; sourceTree = "<group>"; };
+		D92188F22C1759DD00407EEE /* Moto_RepaytermView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_RepaytermView.xib; sourceTree = "<group>"; };
+		D92188F42C175CC500407EEE /* Moto_RepayTipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_RepayTipsView.swift; sourceTree = "<group>"; };
+		D92188F62C175CEB00407EEE /* Moto_RepayTipsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_RepayTipsView.xib; sourceTree = "<group>"; };
+		D92188F82C175E6400407EEE /* Moto_FullPayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_FullPayView.swift; sourceTree = "<group>"; };
+		D92188FA2C175E8400407EEE /* Moto_FullPayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_FullPayView.xib; sourceTree = "<group>"; };
+		D92188FC2C175FAB00407EEE /* Moto_RepaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_RepaymentViewController.swift; sourceTree = "<group>"; };
+		D92188FE2C17617300407EEE /* Moto_RepaymentMethodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_RepaymentMethodModel.swift; sourceTree = "<group>"; };
+		D92189002C17627200407EEE /* Moto_RepaymentMethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_RepaymentMethodView.swift; sourceTree = "<group>"; };
+		D92189022C17628F00407EEE /* Moto_RepaymentMethodView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_RepaymentMethodView.xib; sourceTree = "<group>"; };
+		D92189042C1763C900407EEE /* Moto_RepayChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_RepayChannelView.swift; sourceTree = "<group>"; };
+		D92189062C1763E600407EEE /* Moto_RepayChannelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_RepayChannelView.xib; sourceTree = "<group>"; };
+		D92189082C17654700407EEE /* Moto_PayChannelCheckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_PayChannelCheckModel.swift; sourceTree = "<group>"; };
+		D921890A2C1767A600407EEE /* Moto_LoanRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_LoanRecordViewController.swift; sourceTree = "<group>"; };
+		D921890C2C17686200407EEE /* Moto_LoanRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_LoanRecordCell.swift; sourceTree = "<group>"; };
+		D921890D2C17686200407EEE /* Moto_LoanRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_LoanRecordCell.xib; sourceTree = "<group>"; };
+		D92189102C17699F00407EEE /* Moto_LoanRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_LoanRecordModel.swift; sourceTree = "<group>"; };
+		D92189122C176A6700407EEE /* Moto_LoanRecordPlaceHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_LoanRecordPlaceHolder.swift; sourceTree = "<group>"; };
+		D92189142C176A7E00407EEE /* Moto_LoanRecordPlaceHolder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_LoanRecordPlaceHolder.xib; sourceTree = "<group>"; };
+		D92189162C176B7F00407EEE /* Moto_SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_SetupViewController.swift; sourceTree = "<group>"; };
+		D92189182C176D2B00407EEE /* Moto_ChangeMobileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_ChangeMobileViewController.swift; sourceTree = "<group>"; };
+		D921891A2C176FBB00407EEE /* Moto_ChangeMobileSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_ChangeMobileSuccessViewController.swift; sourceTree = "<group>"; };
+		D921891C2C1771DF00407EEE /* Moto_DeleteAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_DeleteAccountViewController.swift; sourceTree = "<group>"; };
+		D921891E2C17724B00407EEE /* Moto_AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_AboutViewController.swift; sourceTree = "<group>"; };
+		D92189202C17742200407EEE /* Moto_InputPassWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_InputPassWordView.swift; sourceTree = "<group>"; };
+		D92189222C17743E00407EEE /* Moto_InputPassWordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_InputPassWordView.xib; sourceTree = "<group>"; };
+		D92189242C1775C900407EEE /* Moto_ChangeMobileFailureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_ChangeMobileFailureViewController.swift; sourceTree = "<group>"; };
+		D929664C2C1A9C4700906558 /* Moto_LoanTipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_LoanTipsView.swift; sourceTree = "<group>"; };
+		D929664E2C1A9C6500906558 /* Moto_LoanTipsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_LoanTipsView.xib; sourceTree = "<group>"; };
+		D9445D202C1945C20020143B /* Moto_RepayUrlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_RepayUrlModel.swift; sourceTree = "<group>"; };
+		D96ACB032C15DF5F0065C622 /* Moto_LoanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_LoanViewController.swift; sourceTree = "<group>"; };
+		D96ACB052C15E0760065C622 /* Moto_LoanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_LoanModel.swift; sourceTree = "<group>"; };
+		D96ACB072C15E41D0065C622 /* Moto_LoanDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_LoanDetailModel.swift; sourceTree = "<group>"; };
+		D96ACB092C15E58B0065C622 /* Moto_LoanAccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_LoanAccountModel.swift; sourceTree = "<group>"; };
+		D96ACB0B2C15E7B90065C622 /* Moto_LoanRepayItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_LoanRepayItemView.swift; sourceTree = "<group>"; };
+		D96ACB0D2C15E7D30065C622 /* Moto_LoanRepayItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_LoanRepayItemView.xib; sourceTree = "<group>"; };
+		D96ACB0F2C15EA850065C622 /* Moto_LoanSuccessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_LoanSuccessModel.swift; sourceTree = "<group>"; };
+		D96ACB112C15EB8E0065C622 /* Moto_OneBtnPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_OneBtnPopView.swift; sourceTree = "<group>"; };
+		D96ACB132C15EBBC0065C622 /* Moto_OneBtnPopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_OneBtnPopView.xib; sourceTree = "<group>"; };
+		D96ACB152C15F57C0065C622 /* Moto_ReLoanPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_ReLoanPopView.swift; sourceTree = "<group>"; };
+		D96ACB172C15F58D0065C622 /* Moto_ReLoanPopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_ReLoanPopView.xib; sourceTree = "<group>"; };
+		D96ACB192C15F7FE0065C622 /* Moto_WithdrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_WithdrawViewController.swift; sourceTree = "<group>"; };
+		D96ACB1B2C15FC300065C622 /* Moto_AccountListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_AccountListViewController.swift; sourceTree = "<group>"; };
+		D96ACB1D2C15FDFE0065C622 /* Moto_UserAccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_UserAccountModel.swift; sourceTree = "<group>"; };
+		D96ACB1F2C15FEAA0065C622 /* Moto_AccountPlaceHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_AccountPlaceHolder.swift; sourceTree = "<group>"; };
+		D96ACB212C15FECA0065C622 /* Moto_AccountPlaceHolder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_AccountPlaceHolder.xib; sourceTree = "<group>"; };
+		D96ACB232C1604F60065C622 /* Moto_UserAccountListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_UserAccountListCell.swift; sourceTree = "<group>"; };
+		D96ACB242C1604F60065C622 /* Moto_UserAccountListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_UserAccountListCell.xib; sourceTree = "<group>"; };
+		D96ACB272C160C9E0065C622 /* Moto_AddUserAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_AddUserAccountViewController.swift; sourceTree = "<group>"; };
+		D96ACB292C1611790065C622 /* Moto_SelectInputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_SelectInputModel.swift; sourceTree = "<group>"; };
+		D96ACB2B2C16120E0065C622 /* Moto_AccountOrgNameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_AccountOrgNameModel.swift; sourceTree = "<group>"; };
+		D96ACB2D2C1613400065C622 /* Moto_UserNameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_UserNameModel.swift; sourceTree = "<group>"; };
+		D96ACB2F2C1613B50065C622 /* Moto_SelectInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_SelectInputView.swift; sourceTree = "<group>"; };
+		D96ACB312C1613CC0065C622 /* Moto_SelectInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_SelectInputView.xib; sourceTree = "<group>"; };
+		D97570C12C148CD100E1D435 /* Moto_HomeRepayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_HomeRepayCell.swift; sourceTree = "<group>"; };
+		D97570C22C148CD100E1D435 /* Moto_HomeInViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_HomeInViewCell.xib; sourceTree = "<group>"; };
+		D985000C2C10A5D300474CFF /* Moto_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_Utils.swift; sourceTree = "<group>"; };
+		D98500102C10A86700474CFF /* Moto_LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_LoginModel.swift; sourceTree = "<group>"; };
+		D98500132C10ADA300474CFF /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		D98500152C10AED400474CFF /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		D98500172C10AF2600474CFF /* Device+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device+Ext.swift"; sourceTree = "<group>"; };
+		D98500192C10B29200474CFF /* Moto_Apis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_Apis.swift; sourceTree = "<group>"; };
+		D985001B2C10B3CC00474CFF /* Moto_Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_Networking.swift; sourceTree = "<group>"; };
+		D985001D2C10B4E600474CFF /* Moto_BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_BaseModel.swift; sourceTree = "<group>"; };
+		D98500202C10B69E00474CFF /* Moto_AddressParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_AddressParse.swift; sourceTree = "<group>"; };
+		D98500222C10B79100474CFF /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		D98500242C10B7DA00474CFF /* Moto_Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_Const.swift; sourceTree = "<group>"; };
+		D98500262C10B87300474CFF /* Moto_UploadRisk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_UploadRisk.swift; sourceTree = "<group>"; };
+		D98500282C114E8300474CFF /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
+		D985002A2C114EAB00474CFF /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		D985002D2C11514400474CFF /* Moto_HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_HomeViewController.swift; sourceTree = "<group>"; };
+		D98500302C11539300474CFF /* Moto_MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_MineViewController.swift; sourceTree = "<group>"; };
+		D987FCD42C16D4D600464859 /* Moto_CacheModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_CacheModel.swift; sourceTree = "<group>"; };
+		D987FCD62C16D54E00464859 /* Moto_InfoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_InfoListModel.swift; sourceTree = "<group>"; };
+		D987FCD82C16D60E00464859 /* Moto_AutoFillEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_AutoFillEmailView.swift; sourceTree = "<group>"; };
+		D987FCDA2C16D61E00464859 /* Moto_AutoFillEmailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_AutoFillEmailView.xib; sourceTree = "<group>"; };
+		D987FCDC2C16D8DE00464859 /* Moto_EmailInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_EmailInputView.swift; sourceTree = "<group>"; };
+		D987FCDE2C16D8F400464859 /* Moto_EmailInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_EmailInputView.xib; sourceTree = "<group>"; };
+		D987FCE02C16DB2F00464859 /* Moto_CancelPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_CancelPopView.swift; sourceTree = "<group>"; };
+		D987FCE22C16DB3A00464859 /* Moto_CancelPopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_CancelPopView.xib; sourceTree = "<group>"; };
+		D987FCE42C16DDEE00464859 /* Moto_JobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_JobViewController.swift; sourceTree = "<group>"; };
+		D994C4A32C12F75A0074A0F0 /* Moto_HomeMarqueeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_HomeMarqueeCell.swift; sourceTree = "<group>"; };
+		D994C4A62C12F81F0074A0F0 /* Moto_HomeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_HomeDataModel.swift; sourceTree = "<group>"; };
+		D994C4A82C12FDD20074A0F0 /* Moto_HomeInitalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_HomeInitalCell.swift; sourceTree = "<group>"; };
+		D994C4A92C12FDD20074A0F0 /* Moto_HomeInitalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_HomeInitalCell.xib; sourceTree = "<group>"; };
+		D994C4AC2C1309AD0074A0F0 /* Moto_CornerRaduisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_CornerRaduisView.swift; sourceTree = "<group>"; };
+		D994C4AF2C130D630074A0F0 /* Moto_LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_LoginViewController.swift; sourceTree = "<group>"; };
+		D994C4B22C1319170074A0F0 /* Moto_LoginCheckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_LoginCheckModel.swift; sourceTree = "<group>"; };
+		D994C4B42C1321000074A0F0 /* Moto_HomeRepayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_HomeRepayModel.swift; sourceTree = "<group>"; };
+		D994C4B62C1342AB0074A0F0 /* Moto_HomeStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_HomeStatusCell.swift; sourceTree = "<group>"; };
+		D994C4B72C1342AB0074A0F0 /* Moto_HomeStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_HomeStatusCell.xib; sourceTree = "<group>"; };
+		D994C4BA2C14313F0074A0F0 /* Moto_HomeInViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_HomeInViewCell.swift; sourceTree = "<group>"; };
+		D994C4BB2C14313F0074A0F0 /* Moto_HomeRepayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_HomeRepayCell.xib; sourceTree = "<group>"; };
+		D9C667A02C15725400FA448D /* Moto_SetPasswdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_SetPasswdViewController.swift; sourceTree = "<group>"; };
+		D9C6D2B42C12ACBF0077F448 /* Moto_FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_FeedViewController.swift; sourceTree = "<group>"; };
+		D9C6D2B62C12B2690077F448 /* Moto_FeedProViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_FeedProViewController.swift; sourceTree = "<group>"; };
+		D9C6D2B82C12B27F0077F448 /* Moto_FeedCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_FeedCollectionViewController.swift; sourceTree = "<group>"; };
+		D9C6D2BB2C12DFEE0077F448 /* Moto_FeedSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_FeedSelectView.swift; sourceTree = "<group>"; };
+		D9C6D2BD2C12DFFC0077F448 /* Moto_FeedSelectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_FeedSelectView.xib; sourceTree = "<group>"; };
+		D9C6D2C02C12E5A90077F448 /* Moto_SelectInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_SelectInfoModel.swift; sourceTree = "<group>"; };
+		D9C6D2C32C12E6A40077F448 /* Moto_SelectInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_SelectInfoCell.swift; sourceTree = "<group>"; };
+		D9C6D2C42C12E6A40077F448 /* Moto_SelectInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Moto_SelectInfoCell.xib; sourceTree = "<group>"; };
+		D9D301FA2C155866004356C2 /* Moto_ForgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_ForgetViewController.swift; sourceTree = "<group>"; };
+		D9D301FC2C1558C6004356C2 /* Moto_RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_RegisterViewController.swift; sourceTree = "<group>"; };
+		D9D655E72C11910B00741DD7 /* Moto_HomeFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Moto_HomeFooter.xib; sourceTree = "<group>"; };
+		D9D655EA2C1192EC00741DD7 /* Moto_HomeBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_HomeBanner.swift; sourceTree = "<group>"; };
+		D9D655EC2C11948100741DD7 /* Moto_WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_WebViewController.swift; sourceTree = "<group>"; };
+		D9F0DC812C1AF330006246CC /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		D9F0DC832C1AFF3F006246CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D9F7C2C22C1188C5007CC599 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		D9F7C2C52C118A38007CC599 /* Moto_BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_BaseView.swift; sourceTree = "<group>"; };
+		D9F7C2C82C118B51007CC599 /* Moto_HomeFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_HomeFooter.swift; sourceTree = "<group>"; };
+		EBDB8503BE27DB50294A4E3B /* Pods-MotorcycleLoanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorcycleLoanTests.debug.xcconfig"; path = "Target Support Files/Pods-MotorcycleLoanTests/Pods-MotorcycleLoanTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D909373C2C105FA700B5B69F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63DA10840609969F038D63DF /* Pods_MotorcycleLoan.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90937522C105FA800B5B69F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94C3D6C63507D253535EC6F8 /* Pods_MotorcycleLoanTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D909375C2C105FA800B5B69F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBAD10D006B6F2DC00D352E7 /* Pods_MotorcycleLoan_MotorcycleLoanUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F4B754CDEEDD68B142A0548 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B65BE01BC84C855F6BC4CC7 /* Pods_MotorcycleLoan.framework */,
+				119E7D39D5187724C0FDAAB1 /* Pods_MotorcycleLoan_MotorcycleLoanUITests.framework */,
+				B0F2193097055AB0E7DA4366 /* Pods_MotorcycleLoanTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D90937362C105FA700B5B69F = {
+			isa = PBXGroup;
+			children = (
+				D9F0DC812C1AF330006246CC /* PrivacyInfo.xcprivacy */,
+				D90937412C105FA700B5B69F /* MotorcycleLoan */,
+				D90937582C105FA800B5B69F /* MotorcycleLoanTests */,
+				D90937622C105FA800B5B69F /* MotorcycleLoanUITests */,
+				D90937402C105FA700B5B69F /* Products */,
+				E27AD137A021C3944B3E3995 /* Pods */,
+				0F4B754CDEEDD68B142A0548 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D90937402C105FA700B5B69F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D909373F2C105FA700B5B69F /* MotorcycleLoan.app */,
+				D90937552C105FA800B5B69F /* MotorcycleLoanTests.xctest */,
+				D909375F2C105FA800B5B69F /* MotorcycleLoanUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D90937412C105FA700B5B69F /* MotorcycleLoan */ = {
+			isa = PBXGroup;
+			children = (
+				D9F0DC832C1AFF3F006246CC /* GoogleService-Info.plist */,
+				D90937732C1064D800B5B69F /* Main */,
+				D90937762C1067C900B5B69F /* Assets */,
+				D98500092C10A26F00474CFF /* Vender */,
+				D909377C2C106ACD00B5B69F /* Moudle */,
+				D98500072C10A1E500474CFF /* Service */,
+				D98500052C10A16400474CFF /* Common */,
+			);
+			path = MotorcycleLoan;
+			sourceTree = "<group>";
+		};
+		D90937582C105FA800B5B69F /* MotorcycleLoanTests */ = {
+			isa = PBXGroup;
+			children = (
+				D90937592C105FA800B5B69F /* MotorcycleLoanTests.swift */,
+			);
+			path = MotorcycleLoanTests;
+			sourceTree = "<group>";
+		};
+		D90937622C105FA800B5B69F /* MotorcycleLoanUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D90937632C105FA800B5B69F /* MotorcycleLoanUITests.swift */,
+				D90937652C105FA800B5B69F /* MotorcycleLoanUITestsLaunchTests.swift */,
+			);
+			path = MotorcycleLoanUITests;
+			sourceTree = "<group>";
+		};
+		D90937732C1064D800B5B69F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D90937502C105FA800B5B69F /* Info.plist */,
+				D90937422C105FA700B5B69F /* AppDelegate.swift */,
+				D90937442C105FA700B5B69F /* SceneDelegate.swift */,
+				D90937462C105FA700B5B69F /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D90937752C1066C800B5B69F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D90937482C105FA700B5B69F /* Main.storyboard */,
+				D98500282C114E8300474CFF /* Mine.storyboard */,
+				D985002A2C114EAB00474CFF /* Home.storyboard */,
+				D9F7C2C22C1188C5007CC599 /* Register.storyboard */,
+				D909374D2C105FA800B5B69F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D90937762C1067C900B5B69F /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D90937772C1067EC00B5B69F /* File */,
+				D909377A2C106A1C00B5B69F /* html */,
+				D909374B2C105FA800B5B69F /* Assets.xcassets */,
+				D90937752C1066C800B5B69F /* Storyboards */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		D90937772C1067EC00B5B69F /* File */ = {
+			isa = PBXGroup;
+			children = (
+				D90937782C10692900B5B69F /* mo_address_data */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
+		D909377C2C106ACD00B5B69F /* Moudle */ = {
+			isa = PBXGroup;
+			children = (
+				D909377D2C106AEE00B5B69F /* Base */,
+				D90937862C106EFB00B5B69F /* Mine */,
+				D90937852C106E7800B5B69F /* Home */,
+				D985000E2C10A7FE00474CFF /* Account */,
+			);
+			path = Moudle;
+			sourceTree = "<group>";
+		};
+		D909377D2C106AEE00B5B69F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D9F7C2C42C1189DA007CC599 /* View */,
+				D985001F2C10B4F200474CFF /* Model */,
+				D909377E2C106B0800B5B69F /* Controllers */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D909377E2C106B0800B5B69F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D909377F2C106B7400B5B69F /* Moto_ViewController.swift */,
+				D90937832C106CFE00B5B69F /* Moto_TabBarController.swift */,
+				D9D655EC2C11948100741DD7 /* Moto_WebViewController.swift */,
+				D90937812C106C0700B5B69F /* Moto_NavigatonController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D90937852C106E7800B5B69F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D9D655E92C11918500741DD7 /* Cell */,
+				D9F7C2C72C118B00007CC599 /* View */,
+				D994C4A52C12F7D20074A0F0 /* Model */,
+				D985002C2C11503800474CFF /* Controllers */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D90937862C106EFB00B5B69F /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				D9C6D2C22C12E6190077F448 /* Cell */,
+				D9C6D2BA2C12DF860077F448 /* View */,
+				D9C6D2BF2C12E5730077F448 /* Model */,
+				D985002F2C1152FB00474CFF /* Controllers */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		D98500052C10A16400474CFF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D98500122C10AD5500474CFF /* Ext */,
+				D98500062C10A1C600474CFF /* Utils */,
+				D98500082C10A20E00474CFF /* View */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D98500062C10A1C600474CFF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D985000C2C10A5D300474CFF /* Moto_Utils.swift */,
+				D98500242C10B7DA00474CFF /* Moto_Const.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D98500072C10A1E500474CFF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D98500192C10B29200474CFF /* Moto_Apis.swift */,
+				D985001B2C10B3CC00474CFF /* Moto_Networking.swift */,
+				D98500262C10B87300474CFF /* Moto_UploadRisk.swift */,
+				D98500202C10B69E00474CFF /* Moto_AddressParse.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D98500082C10A20E00474CFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D994C4AC2C1309AD0074A0F0 /* Moto_CornerRaduisView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D98500092C10A26F00474CFF /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				D985000A2C10A2B300474CFF /* R.swift */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		D985000A2C10A2B300474CFF /* R.swift */ = {
+			isa = PBXGroup;
+			children = (
+				D98500222C10B79100474CFF /* R.generated.swift */,
+			);
+			path = R.swift;
+			sourceTree = "<group>";
+		};
+		D985000E2C10A7FE00474CFF /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				D985000F2C10A82D00474CFF /* Model */,
+				D994C4AE2C130C520074A0F0 /* Controller */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		D985000F2C10A82D00474CFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D98500102C10A86700474CFF /* Moto_LoginModel.swift */,
+				D994C4B22C1319170074A0F0 /* Moto_LoginCheckModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D98500122C10AD5500474CFF /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				D98500132C10ADA300474CFF /* View+Ext.swift */,
+				D98500152C10AED400474CFF /* String+Ext.swift */,
+				D98500172C10AF2600474CFF /* Device+Ext.swift */,
+			);
+			path = Ext;
+			sourceTree = "<group>";
+		};
+		D985001F2C10B4F200474CFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D985001D2C10B4E600474CFF /* Moto_BaseModel.swift */,
+				D987FCD42C16D4D600464859 /* Moto_CacheModel.swift */,
+				D96ACB292C1611790065C622 /* Moto_SelectInputModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D985002C2C11503800474CFF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D985002D2C11514400474CFF /* Moto_HomeViewController.swift */,
+				D90FFA202C16214100347913 /* Moto_PreAuthViewController.swift */,
+				D90FFA222C16250000347913 /* Moto_AuthCenterViewController.swift */,
+				D90FFA262C162A9300347913 /* Moto_BasicViewController.swift */,
+				D987FCE42C16DDEE00464859 /* Moto_JobViewController.swift */,
+				D92188C82C16FCDA00407EEE /* Moto_AddressInfoViewController.swift */,
+				D92188D02C1705C300407EEE /* Moto_ContactViewController.swift */,
+				D92188CA2C16FD4C00407EEE /* Moto_AddressSelectViewController.swift */,
+				D90FFA282C162B2300347913 /* Moto_IdentityViewController.swift */,
+				D92188EA2C17479F00407EEE /* Moto_FaceOcrViewController.swift */,
+				D92188EC2C17481F00407EEE /* Moto_CustomPhotoController.swift */,
+				D91F9CC22C1589640081FE59 /* Moto_PreliminaryViewController.swift */,
+				D96ACB032C15DF5F0065C622 /* Moto_LoanViewController.swift */,
+				D92188EE2C17542100407EEE /* Moto_RepayViewController.swift */,
+				D92188FC2C175FAB00407EEE /* Moto_RepaymentViewController.swift */,
+				D96ACB192C15F7FE0065C622 /* Moto_WithdrawViewController.swift */,
+				D96ACB1B2C15FC300065C622 /* Moto_AccountListViewController.swift */,
+				D96ACB272C160C9E0065C622 /* Moto_AddUserAccountViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D985002F2C1152FB00474CFF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D98500302C11539300474CFF /* Moto_MineViewController.swift */,
+				D9C6D2B42C12ACBF0077F448 /* Moto_FeedViewController.swift */,
+				D92189162C176B7F00407EEE /* Moto_SetupViewController.swift */,
+				D921891E2C17724B00407EEE /* Moto_AboutViewController.swift */,
+				D9C6D2B62C12B2690077F448 /* Moto_FeedProViewController.swift */,
+				D921890A2C1767A600407EEE /* Moto_LoanRecordViewController.swift */,
+				D921891C2C1771DF00407EEE /* Moto_DeleteAccountViewController.swift */,
+				D9C6D2B82C12B27F0077F448 /* Moto_FeedCollectionViewController.swift */,
+				D92189182C176D2B00407EEE /* Moto_ChangeMobileViewController.swift */,
+				D92189242C1775C900407EEE /* Moto_ChangeMobileFailureViewController.swift */,
+				D921891A2C176FBB00407EEE /* Moto_ChangeMobileSuccessViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D994C4A52C12F7D20074A0F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D96ACB052C15E0760065C622 /* Moto_LoanModel.swift */,
+				D987FCD62C16D54E00464859 /* Moto_InfoListModel.swift */,
+				D92188DC2C17412D00407EEE /* Moto_CardOcrModel.swift */,
+				D92188D82C173F6D00407EEE /* Moto_FaceDataModel.swift */,
+				D9445D202C1945C20020143B /* Moto_RepayUrlModel.swift */,
+				D96ACB2D2C1613400065C622 /* Moto_UserNameModel.swift */,
+				D96ACB072C15E41D0065C622 /* Moto_LoanDetailModel.swift */,
+				D994C4A62C12F81F0074A0F0 /* Moto_HomeDataModel.swift */,
+				D90FFA242C16278E00347913 /* Moto_AuthStatusModel.swift */,
+				D92188DA2C1740BD00407EEE /* Moto_RollBackFillModel.swift */,
+				D994C4B42C1321000074A0F0 /* Moto_HomeRepayModel.swift */,
+				D96ACB1D2C15FDFE0065C622 /* Moto_UserAccountModel.swift */,
+				D96ACB0F2C15EA850065C622 /* Moto_LoanSuccessModel.swift */,
+				D96ACB092C15E58B0065C622 /* Moto_LoanAccountModel.swift */,
+				D92188D22C17375C00407EEE /* Moto_ContactCacheModel.swift */,
+				D90FFA0C2C1615D000347913 /* Moto_IdentityCacheModel.swift */,
+				D92189082C17654700407EEE /* Moto_PayChannelCheckModel.swift */,
+				D92188FE2C17617300407EEE /* Moto_RepaymentMethodModel.swift */,
+				D96ACB2B2C16120E0065C622 /* Moto_AccountOrgNameModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D994C4AE2C130C520074A0F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D994C4AF2C130D630074A0F0 /* Moto_LoginViewController.swift */,
+				D9D301FA2C155866004356C2 /* Moto_ForgetViewController.swift */,
+				D9D301FC2C1558C6004356C2 /* Moto_RegisterViewController.swift */,
+				D9C667A02C15725400FA448D /* Moto_SetPasswdViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D9C6D2BA2C12DF860077F448 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D9C6D2BB2C12DFEE0077F448 /* Moto_FeedSelectView.swift */,
+				D9C6D2BD2C12DFFC0077F448 /* Moto_FeedSelectView.xib */,
+				D92189202C17742200407EEE /* Moto_InputPassWordView.swift */,
+				D92189222C17743E00407EEE /* Moto_InputPassWordView.xib */,
+				D92189122C176A6700407EEE /* Moto_LoanRecordPlaceHolder.swift */,
+				D92189142C176A7E00407EEE /* Moto_LoanRecordPlaceHolder.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D9C6D2BF2C12E5730077F448 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D9C6D2C02C12E5A90077F448 /* Moto_SelectInfoModel.swift */,
+				D92189102C17699F00407EEE /* Moto_LoanRecordModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D9C6D2C22C12E6190077F448 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D9C6D2C32C12E6A40077F448 /* Moto_SelectInfoCell.swift */,
+				D9C6D2C42C12E6A40077F448 /* Moto_SelectInfoCell.xib */,
+				D921890C2C17686200407EEE /* Moto_LoanRecordCell.swift */,
+				D921890D2C17686200407EEE /* Moto_LoanRecordCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D9D655E92C11918500741DD7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D92188CC2C1700ED00407EEE /* Moto_AddressCell.swift */,
+				D92188CD2C1700ED00407EEE /* Moto_AddressCell.xib */,
+				D9D655EA2C1192EC00741DD7 /* Moto_HomeBanner.swift */,
+				D994C4A82C12FDD20074A0F0 /* Moto_HomeInitalCell.swift */,
+				D994C4A92C12FDD20074A0F0 /* Moto_HomeInitalCell.xib */,
+				D994C4B62C1342AB0074A0F0 /* Moto_HomeStatusCell.swift */,
+				D994C4B72C1342AB0074A0F0 /* Moto_HomeStatusCell.xib */,
+				D97570C12C148CD100E1D435 /* Moto_HomeRepayCell.swift */,
+				D994C4BB2C14313F0074A0F0 /* Moto_HomeRepayCell.xib */,
+				D994C4BA2C14313F0074A0F0 /* Moto_HomeInViewCell.swift */,
+				D97570C22C148CD100E1D435 /* Moto_HomeInViewCell.xib */,
+				D994C4A32C12F75A0074A0F0 /* Moto_HomeMarqueeCell.swift */,
+				D96ACB232C1604F60065C622 /* Moto_UserAccountListCell.swift */,
+				D96ACB242C1604F60065C622 /* Moto_UserAccountListCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D9F7C2C42C1189DA007CC599 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D9F7C2C52C118A38007CC599 /* Moto_BaseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D9F7C2C72C118B00007CC599 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D92188DE2C1741BD00407EEE /* Moto_IdentityView.swift */,
+				D92188E02C1741CF00407EEE /* Moto_IdentityView.xib */,
+				D92188E62C17456900407EEE /* Moto_GenderView.swift */,
+				D92188E82C17457600407EEE /* Moto_GenderView.xib */,
+				D9F7C2C82C118B51007CC599 /* Moto_HomeFooter.swift */,
+				D9D655E72C11910B00741DD7 /* Moto_HomeFooter.xib */,
+				D92188F82C175E6400407EEE /* Moto_FullPayView.swift */,
+				D92188FA2C175E8400407EEE /* Moto_FullPayView.xib */,
+				D929664C2C1A9C4700906558 /* Moto_LoanTipsView.swift */,
+				D929664E2C1A9C6500906558 /* Moto_LoanTipsView.xib */,
+				D92188F42C175CC500407EEE /* Moto_RepayTipsView.swift */,
+				D92188F62C175CEB00407EEE /* Moto_RepayTipsView.xib */,
+				D90FFA102C16182A00347913 /* Moto_SelectInfoView.swift */,
+				D90FFA122C16184200347913 /* Moto_SelectInfoView.xib */,
+				D987FCE02C16DB2F00464859 /* Moto_CancelPopView.swift */,
+				D987FCE22C16DB3A00464859 /* Moto_CancelPopView.xib */,
+				D987FCDC2C16D8DE00464859 /* Moto_EmailInputView.swift */,
+				D987FCDE2C16D8F400464859 /* Moto_EmailInputView.xib */,
+				D92188F02C1759C300407EEE /* Moto_RepaytermView.swift */,
+				D92188F22C1759DD00407EEE /* Moto_RepaytermView.xib */,
+				D96ACB2F2C1613B50065C622 /* Moto_SelectInputView.swift */,
+				D96ACB312C1613CC0065C622 /* Moto_SelectInputView.xib */,
+				D96ACB112C15EB8E0065C622 /* Moto_OneBtnPopView.swift */,
+				D96ACB132C15EBBC0065C622 /* Moto_OneBtnPopView.xib */,
+				D96ACB152C15F57C0065C622 /* Moto_ReLoanPopView.swift */,
+				D96ACB172C15F58D0065C622 /* Moto_ReLoanPopView.xib */,
+				D90FFA1C2C161FFA00347913 /* Moto_ServiceFeeView.swift */,
+				D90FFA1E2C16200800347913 /* Moto_ServiceFeeView.xib */,
+				D92188D42C1738F400407EEE /* Moto_ContactInfoView.swift */,
+				D92188D62C17390800407EEE /* Moto_ContactInfoView.xib */,
+				D987FCD82C16D60E00464859 /* Moto_AutoFillEmailView.swift */,
+				D987FCDA2C16D61E00464859 /* Moto_AutoFillEmailView.xib */,
+				D90FFA182C161E5200347913 /* Moto_LoanSmsCodeView.swift */,
+				D90FFA1A2C161E6400347913 /* Moto_LoanSmsCodeView.xib */,
+				D92189042C1763C900407EEE /* Moto_RepayChannelView.swift */,
+				D92189062C1763E600407EEE /* Moto_RepayChannelView.xib */,
+				D96ACB1F2C15FEAA0065C622 /* Moto_AccountPlaceHolder.swift */,
+				D96ACB212C15FECA0065C622 /* Moto_AccountPlaceHolder.xib */,
+				D96ACB0B2C15E7B90065C622 /* Moto_LoanRepayItemView.swift */,
+				D96ACB0D2C15E7D30065C622 /* Moto_LoanRepayItemView.xib */,
+				D92189002C17627200407EEE /* Moto_RepaymentMethodView.swift */,
+				D92189022C17628F00407EEE /* Moto_RepaymentMethodView.xib */,
+				D92188E22C1743F900407EEE /* Moto_BrithDayPickerSelectView.swift */,
+				D92188E42C17440C00407EEE /* Moto_BrithDayPickerSelectView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E27AD137A021C3944B3E3995 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38BADF1FADF68B94A4E68B55 /* Pods-MotorcycleLoan.debug.xcconfig */,
+				800DD36EAA34F48DFF3A6DFD /* Pods-MotorcycleLoan.release.xcconfig */,
+				630C1BDDD2383C1DAFE448B7 /* Pods-MotorcycleLoan-MotorcycleLoanUITests.debug.xcconfig */,
+				2BA8CF05A1F9D68544638FD7 /* Pods-MotorcycleLoan-MotorcycleLoanUITests.release.xcconfig */,
+				EBDB8503BE27DB50294A4E3B /* Pods-MotorcycleLoanTests.debug.xcconfig */,
+				9EDF6F14B2282561BEECB252 /* Pods-MotorcycleLoanTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D909373E2C105FA700B5B69F /* MotorcycleLoan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D90937692C105FA800B5B69F /* Build configuration list for PBXNativeTarget "MotorcycleLoan" */;
+			buildPhases = (
+				699F1CCB98020876B37F858E /* [CP] Check Pods Manifest.lock */,
+				D985000B2C10A2EC00474CFF /* ShellScript */,
+				D909373B2C105FA700B5B69F /* Sources */,
+				D909373C2C105FA700B5B69F /* Frameworks */,
+				D909373D2C105FA700B5B69F /* Resources */,
+				056DACD6F0DEE88241EE77BD /* [CP] Embed Pods Frameworks */,
+				D9F0DC852C1B0185006246CC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MotorcycleLoan;
+			productName = MotorcycleLoan;
+			productReference = D909373F2C105FA700B5B69F /* MotorcycleLoan.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D90937542C105FA800B5B69F /* MotorcycleLoanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D909376C2C105FA800B5B69F /* Build configuration list for PBXNativeTarget "MotorcycleLoanTests" */;
+			buildPhases = (
+				191F9556A9A4747878DFBBDB /* [CP] Check Pods Manifest.lock */,
+				D90937512C105FA800B5B69F /* Sources */,
+				D90937522C105FA800B5B69F /* Frameworks */,
+				D90937532C105FA800B5B69F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D90937572C105FA800B5B69F /* PBXTargetDependency */,
+			);
+			name = MotorcycleLoanTests;
+			productName = MotorcycleLoanTests;
+			productReference = D90937552C105FA800B5B69F /* MotorcycleLoanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D909375E2C105FA800B5B69F /* MotorcycleLoanUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D909376F2C105FA800B5B69F /* Build configuration list for PBXNativeTarget "MotorcycleLoanUITests" */;
+			buildPhases = (
+				495FD72F2A819716077475FA /* [CP] Check Pods Manifest.lock */,
+				D909375B2C105FA800B5B69F /* Sources */,
+				D909375C2C105FA800B5B69F /* Frameworks */,
+				D909375D2C105FA800B5B69F /* Resources */,
+				AC388D01085E68322FE2308A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D90937612C105FA800B5B69F /* PBXTargetDependency */,
+			);
+			name = MotorcycleLoanUITests;
+			productName = MotorcycleLoanUITests;
+			productReference = D909375F2C105FA800B5B69F /* MotorcycleLoanUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D90937372C105FA700B5B69F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = Moto_;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					D909373E2C105FA700B5B69F = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					D90937542C105FA800B5B69F = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = D909373E2C105FA700B5B69F;
+					};
+					D909375E2C105FA800B5B69F = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = D909373E2C105FA700B5B69F;
+					};
+				};
+			};
+			buildConfigurationList = D909373A2C105FA700B5B69F /* Build configuration list for PBXProject "MotorcycleLoan" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D90937362C105FA700B5B69F;
+			productRefGroup = D90937402C105FA700B5B69F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D909373E2C105FA700B5B69F /* MotorcycleLoan */,
+				D90937542C105FA800B5B69F /* MotorcycleLoanTests */,
+				D909375E2C105FA800B5B69F /* MotorcycleLoanUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D909373D2C105FA700B5B69F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D985002B2C114EAB00474CFF /* Home.storyboard in Resources */,
+				D994C4B82C1342AB0074A0F0 /* Moto_HomeStatusCell.xib in Resources */,
+				D909374C2C105FA800B5B69F /* Assets.xcassets in Resources */,
+				D929664F2C1A9C6500906558 /* Moto_LoanTipsView.xib in Resources */,
+				D90937792C10692900B5B69F /* mo_address_data in Resources */,
+				D96ACB182C15F58D0065C622 /* Moto_ReLoanPopView.xib in Resources */,
+				D92188CF2C1700ED00407EEE /* Moto_AddressCell.xib in Resources */,
+				D97570C32C148CD100E1D435 /* Moto_HomeInViewCell.xib in Resources */,
+				D987FCE32C16DB3A00464859 /* Moto_CancelPopView.xib in Resources */,
+				D909374F2C105FA800B5B69F /* Base in Resources */,
+				D96ACB222C15FECA0065C622 /* Moto_AccountPlaceHolder.xib in Resources */,
+				D994C4AA2C12FDD20074A0F0 /* Moto_HomeInitalCell.xib in Resources */,
+				D92188F32C1759DD00407EEE /* Moto_RepaytermView.xib in Resources */,
+				D987FCDF2C16D8F400464859 /* Moto_EmailInputView.xib in Resources */,
+				D90FFA1B2C161E6400347913 /* Moto_LoanSmsCodeView.xib in Resources */,
+				D92188FB2C175E8400407EEE /* Moto_FullPayView.xib in Resources */,
+				D90FFA1F2C16200800347913 /* Moto_ServiceFeeView.xib in Resources */,
+				D92189032C17628F00407EEE /* Moto_RepaymentMethodView.xib in Resources */,
+				D9D655E82C11910B00741DD7 /* Moto_HomeFooter.xib in Resources */,
+				D98500292C114E8300474CFF /* Mine.storyboard in Resources */,
+				D96ACB142C15EBBC0065C622 /* Moto_OneBtnPopView.xib in Resources */,
+				D987FCDB2C16D61E00464859 /* Moto_AutoFillEmailView.xib in Resources */,
+				D921890F2C17686200407EEE /* Moto_LoanRecordCell.xib in Resources */,
+				D92188E92C17457600407EEE /* Moto_GenderView.xib in Resources */,
+				D9C6D2C52C12E6A40077F448 /* Moto_SelectInfoCell.xib in Resources */,
+				D92189152C176A7E00407EEE /* Moto_LoanRecordPlaceHolder.xib in Resources */,
+				D92188D72C17390800407EEE /* Moto_ContactInfoView.xib in Resources */,
+				D92189072C1763E600407EEE /* Moto_RepayChannelView.xib in Resources */,
+				D90FFA132C16184200347913 /* Moto_SelectInfoView.xib in Resources */,
+				D92188E52C17440C00407EEE /* Moto_BrithDayPickerSelectView.xib in Resources */,
+				D909374A2C105FA700B5B69F /* Base in Resources */,
+				D96ACB322C1613CC0065C622 /* Moto_SelectInputView.xib in Resources */,
+				D909377B2C106A1C00B5B69F /* html in Resources */,
+				D96ACB252C1604F60065C622 /* Moto_UserAccountListCell.xib in Resources */,
+				D9F7C2C32C1188C5007CC599 /* Register.storyboard in Resources */,
+				D9C6D2BE2C12DFFC0077F448 /* Moto_FeedSelectView.xib in Resources */,
+				D92188E12C1741CF00407EEE /* Moto_IdentityView.xib in Resources */,
+				D96ACB0E2C15E7D30065C622 /* Moto_LoanRepayItemView.xib in Resources */,
+				D994C4BC2C14313F0074A0F0 /* Moto_HomeRepayCell.xib in Resources */,
+				D92188F72C175CEB00407EEE /* Moto_RepayTipsView.xib in Resources */,
+				D92189232C17743E00407EEE /* Moto_InputPassWordView.xib in Resources */,
+				D9F0DC842C1AFF3F006246CC /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90937532C105FA800B5B69F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D909375D2C105FA800B5B69F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		056DACD6F0DEE88241EE77BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MotorcycleLoan/Pods-MotorcycleLoan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MotorcycleLoan/Pods-MotorcycleLoan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MotorcycleLoan/Pods-MotorcycleLoan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		191F9556A9A4747878DFBBDB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MotorcycleLoanTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		495FD72F2A819716077475FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MotorcycleLoan-MotorcycleLoanUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		699F1CCB98020876B37F858E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MotorcycleLoan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC388D01085E68322FE2308A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MotorcycleLoan-MotorcycleLoanUITests/Pods-MotorcycleLoan-MotorcycleLoanUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MotorcycleLoan-MotorcycleLoanUITests/Pods-MotorcycleLoan-MotorcycleLoanUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MotorcycleLoan-MotorcycleLoanUITests/Pods-MotorcycleLoan-MotorcycleLoanUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D985000B2C10A2EC00474CFF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/MotorcycleLoan/Vender/R.swift/R.generated.swift\"\n";
+		};
+		D9F0DC852C1B0185006246CC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D909373B2C105FA700B5B69F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9C667A12C15725400FA448D /* Moto_SetPasswdViewController.swift in Sources */,
+				D98500212C10B69E00474CFF /* Moto_AddressParse.swift in Sources */,
+				D92189092C17654700407EEE /* Moto_PayChannelCheckModel.swift in Sources */,
+				D90FFA212C16214100347913 /* Moto_PreAuthViewController.swift in Sources */,
+				D98500112C10A86700474CFF /* Moto_LoginModel.swift in Sources */,
+				D994C4AB2C12FDD20074A0F0 /* Moto_HomeInitalCell.swift in Sources */,
+				D92188CE2C1700ED00407EEE /* Moto_AddressCell.swift in Sources */,
+				D91F9CC32C1589640081FE59 /* Moto_PreliminaryViewController.swift in Sources */,
+				D92188F12C1759C300407EEE /* Moto_RepaytermView.swift in Sources */,
+				D921890B2C1767A600407EEE /* Moto_LoanRecordViewController.swift in Sources */,
+				D96ACB2E2C1613400065C622 /* Moto_UserNameModel.swift in Sources */,
+				D96ACB0C2C15E7B90065C622 /* Moto_LoanRepayItemView.swift in Sources */,
+				D9D655ED2C11948100741DD7 /* Moto_WebViewController.swift in Sources */,
+				D9D301FD2C1558C6004356C2 /* Moto_RegisterViewController.swift in Sources */,
+				D9C6D2B52C12ACBF0077F448 /* Moto_FeedViewController.swift in Sources */,
+				D987FCD52C16D4D600464859 /* Moto_CacheModel.swift in Sources */,
+				D96ACB1C2C15FC300065C622 /* Moto_AccountListViewController.swift in Sources */,
+				D994C4B92C1342AB0074A0F0 /* Moto_HomeStatusCell.swift in Sources */,
+				D92189132C176A6700407EEE /* Moto_LoanRecordPlaceHolder.swift in Sources */,
+				D98500312C11539300474CFF /* Moto_MineViewController.swift in Sources */,
+				D921890E2C17686200407EEE /* Moto_LoanRecordCell.swift in Sources */,
+				D994C4A72C12F81F0074A0F0 /* Moto_HomeDataModel.swift in Sources */,
+				D98500272C10B87300474CFF /* Moto_UploadRisk.swift in Sources */,
+				D92189192C176D2B00407EEE /* Moto_ChangeMobileViewController.swift in Sources */,
+				D96ACB0A2C15E58B0065C622 /* Moto_LoanAccountModel.swift in Sources */,
+				D90FFA1D2C161FFA00347913 /* Moto_ServiceFeeView.swift in Sources */,
+				D921891B2C176FBB00407EEE /* Moto_ChangeMobileSuccessViewController.swift in Sources */,
+				D985001E2C10B4E600474CFF /* Moto_BaseModel.swift in Sources */,
+				D96ACB282C160C9E0065C622 /* Moto_AddUserAccountViewController.swift in Sources */,
+				D92188DF2C1741BD00407EEE /* Moto_IdentityView.swift in Sources */,
+				D90937842C106CFE00B5B69F /* Moto_TabBarController.swift in Sources */,
+				D90FFA292C162B2300347913 /* Moto_IdentityViewController.swift in Sources */,
+				D96ACB1A2C15F7FE0065C622 /* Moto_WithdrawViewController.swift in Sources */,
+				D98500142C10ADA300474CFF /* View+Ext.swift in Sources */,
+				D92189172C176B7F00407EEE /* Moto_SetupViewController.swift in Sources */,
+				D994C4B02C130D630074A0F0 /* Moto_LoginViewController.swift in Sources */,
+				D90937802C106B7400B5B69F /* Moto_ViewController.swift in Sources */,
+				D92188CB2C16FD4C00407EEE /* Moto_AddressSelectViewController.swift in Sources */,
+				D987FCD72C16D54E00464859 /* Moto_InfoListModel.swift in Sources */,
+				D9C6D2C62C12E6A40077F448 /* Moto_SelectInfoCell.swift in Sources */,
+				D9F7C2C62C118A38007CC599 /* Moto_BaseView.swift in Sources */,
+				D96ACB1E2C15FDFE0065C622 /* Moto_UserAccountModel.swift in Sources */,
+				D90FFA0D2C1615D000347913 /* Moto_IdentityCacheModel.swift in Sources */,
+				D92188D52C1738F400407EEE /* Moto_ContactInfoView.swift in Sources */,
+				D92188E32C1743F900407EEE /* Moto_BrithDayPickerSelectView.swift in Sources */,
+				D92188F92C175E6400407EEE /* Moto_FullPayView.swift in Sources */,
+				D92188DD2C17412D00407EEE /* Moto_CardOcrModel.swift in Sources */,
+				D9D301FB2C155866004356C2 /* Moto_ForgetViewController.swift in Sources */,
+				D994C4B32C1319170074A0F0 /* Moto_LoginCheckModel.swift in Sources */,
+				D985000D2C10A5D300474CFF /* Moto_Utils.swift in Sources */,
+				D90FFA252C16278E00347913 /* Moto_AuthStatusModel.swift in Sources */,
+				D985001A2C10B29200474CFF /* Moto_Apis.swift in Sources */,
+				D96ACB042C15DF5F0065C622 /* Moto_LoanViewController.swift in Sources */,
+				D921891F2C17724B00407EEE /* Moto_AboutViewController.swift in Sources */,
+				D92188D12C1705C300407EEE /* Moto_ContactViewController.swift in Sources */,
+				D90FFA232C16250000347913 /* Moto_AuthCenterViewController.swift in Sources */,
+				D90937472C105FA700B5B69F /* ViewController.swift in Sources */,
+				D90937432C105FA700B5B69F /* AppDelegate.swift in Sources */,
+				D98500252C10B7DA00474CFF /* Moto_Const.swift in Sources */,
+				D90937822C106C0700B5B69F /* Moto_NavigatonController.swift in Sources */,
+				D929664D2C1A9C4700906558 /* Moto_LoanTipsView.swift in Sources */,
+				D92188EB2C17479F00407EEE /* Moto_FaceOcrViewController.swift in Sources */,
+				D92188D92C173F6D00407EEE /* Moto_FaceDataModel.swift in Sources */,
+				D92188E72C17456900407EEE /* Moto_GenderView.swift in Sources */,
+				D98500232C10B79100474CFF /* R.generated.swift in Sources */,
+				D92188F52C175CC500407EEE /* Moto_RepayTipsView.swift in Sources */,
+				D987FCDD2C16D8DE00464859 /* Moto_EmailInputView.swift in Sources */,
+				D92188DB2C1740BD00407EEE /* Moto_RollBackFillModel.swift in Sources */,
+				D9F7C2C92C118B51007CC599 /* Moto_HomeFooter.swift in Sources */,
+				D92188FF2C17617300407EEE /* Moto_RepaymentMethodModel.swift in Sources */,
+				D9D655EB2C1192EC00741DD7 /* Moto_HomeBanner.swift in Sources */,
+				D9445D212C1945C20020143B /* Moto_RepayUrlModel.swift in Sources */,
+				D994C4A42C12F75A0074A0F0 /* Moto_HomeMarqueeCell.swift in Sources */,
+				D97570C42C148CD100E1D435 /* Moto_HomeRepayCell.swift in Sources */,
+				D987FCE52C16DDEE00464859 /* Moto_JobViewController.swift in Sources */,
+				D987FCE12C16DB2F00464859 /* Moto_CancelPopView.swift in Sources */,
+				D96ACB082C15E41D0065C622 /* Moto_LoanDetailModel.swift in Sources */,
+				D96ACB162C15F57C0065C622 /* Moto_ReLoanPopView.swift in Sources */,
+				D98500182C10AF2600474CFF /* Device+Ext.swift in Sources */,
+				D96ACB2C2C16120E0065C622 /* Moto_AccountOrgNameModel.swift in Sources */,
+				D92189052C1763C900407EEE /* Moto_RepayChannelView.swift in Sources */,
+				D92189212C17742200407EEE /* Moto_InputPassWordView.swift in Sources */,
+				D96ACB302C1613B50065C622 /* Moto_SelectInputView.swift in Sources */,
+				D90FFA272C162A9300347913 /* Moto_BasicViewController.swift in Sources */,
+				D994C4BD2C14313F0074A0F0 /* Moto_HomeInViewCell.swift in Sources */,
+				D96ACB102C15EA850065C622 /* Moto_LoanSuccessModel.swift in Sources */,
+				D9C6D2BC2C12DFEE0077F448 /* Moto_FeedSelectView.swift in Sources */,
+				D92188C92C16FCDA00407EEE /* Moto_AddressInfoViewController.swift in Sources */,
+				D92189112C17699F00407EEE /* Moto_LoanRecordModel.swift in Sources */,
+				D92188FD2C175FAB00407EEE /* Moto_RepaymentViewController.swift in Sources */,
+				D96ACB122C15EB8E0065C622 /* Moto_OneBtnPopView.swift in Sources */,
+				D994C4AD2C1309AD0074A0F0 /* Moto_CornerRaduisView.swift in Sources */,
+				D92188D32C17375C00407EEE /* Moto_ContactCacheModel.swift in Sources */,
+				D96ACB2A2C1611790065C622 /* Moto_SelectInputModel.swift in Sources */,
+				D985001C2C10B3CC00474CFF /* Moto_Networking.swift in Sources */,
+				D90FFA192C161E5200347913 /* Moto_LoanSmsCodeView.swift in Sources */,
+				D9C6D2B72C12B2690077F448 /* Moto_FeedProViewController.swift in Sources */,
+				D92188EF2C17542100407EEE /* Moto_RepayViewController.swift in Sources */,
+				D92189252C1775C900407EEE /* Moto_ChangeMobileFailureViewController.swift in Sources */,
+				D921891D2C1771DF00407EEE /* Moto_DeleteAccountViewController.swift in Sources */,
+				D985002E2C11514400474CFF /* Moto_HomeViewController.swift in Sources */,
+				D987FCD92C16D60E00464859 /* Moto_AutoFillEmailView.swift in Sources */,
+				D98500162C10AED400474CFF /* String+Ext.swift in Sources */,
+				D90937452C105FA700B5B69F /* SceneDelegate.swift in Sources */,
+				D92188ED2C17481F00407EEE /* Moto_CustomPhotoController.swift in Sources */,
+				D90FFA112C16182A00347913 /* Moto_SelectInfoView.swift in Sources */,
+				D96ACB062C15E0760065C622 /* Moto_LoanModel.swift in Sources */,
+				D9C6D2C12C12E5A90077F448 /* Moto_SelectInfoModel.swift in Sources */,
+				D994C4B52C1321000074A0F0 /* Moto_HomeRepayModel.swift in Sources */,
+				D96ACB202C15FEAA0065C622 /* Moto_AccountPlaceHolder.swift in Sources */,
+				D96ACB262C1604F60065C622 /* Moto_UserAccountListCell.swift in Sources */,
+				D92189012C17627200407EEE /* Moto_RepaymentMethodView.swift in Sources */,
+				D9C6D2B92C12B27F0077F448 /* Moto_FeedCollectionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90937512C105FA800B5B69F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D909375A2C105FA800B5B69F /* MotorcycleLoanTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D909375B2C105FA800B5B69F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90937642C105FA800B5B69F /* MotorcycleLoanUITests.swift in Sources */,
+				D90937662C105FA800B5B69F /* MotorcycleLoanUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D90937572C105FA800B5B69F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D909373E2C105FA700B5B69F /* MotorcycleLoan */;
+			targetProxy = D90937562C105FA800B5B69F /* PBXContainerItemProxy */;
+		};
+		D90937612C105FA800B5B69F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D909373E2C105FA700B5B69F /* MotorcycleLoan */;
+			targetProxy = D90937602C105FA800B5B69F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D90937482C105FA700B5B69F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D90937492C105FA700B5B69F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D909374D2C105FA800B5B69F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D909374E2C105FA800B5B69F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D90937672C105FA800B5B69F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D90937682C105FA800B5B69F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D909376A2C105FA800B5B69F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38BADF1FADF68B94A4E68B55 /* Pods-MotorcycleLoan.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2GVJAA557F;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MotorcycleLoan/Main/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Use the camera to detect the face movements";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.relyns.asiasource.MotorcycleLoan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Publish;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D909376B2C105FA800B5B69F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 800DD36EAA34F48DFF3A6DFD /* Pods-MotorcycleLoan.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2GVJAA557F;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MotorcycleLoan/Main/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Use the camera to detect the face movements";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.relyns.asiasource.MotorcycleLoan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Publish;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		D909376D2C105FA800B5B69F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBDB8503BE27DB50294A4E3B /* Pods-MotorcycleLoanTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.relyns.asiasource.MotorcycleLoanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MotorcycleLoan.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MotorcycleLoan";
+			};
+			name = Debug;
+		};
+		D909376E2C105FA800B5B69F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EDF6F14B2282561BEECB252 /* Pods-MotorcycleLoanTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.relyns.asiasource.MotorcycleLoanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MotorcycleLoan.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MotorcycleLoan";
+			};
+			name = Release;
+		};
+		D90937702C105FA800B5B69F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 630C1BDDD2383C1DAFE448B7 /* Pods-MotorcycleLoan-MotorcycleLoanUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.relyns.asiasource.MotorcycleLoanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MotorcycleLoan;
+			};
+			name = Debug;
+		};
+		D90937712C105FA800B5B69F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BA8CF05A1F9D68544638FD7 /* Pods-MotorcycleLoan-MotorcycleLoanUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.relyns.asiasource.MotorcycleLoanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MotorcycleLoan;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D909373A2C105FA700B5B69F /* Build configuration list for PBXProject "MotorcycleLoan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D90937672C105FA800B5B69F /* Debug */,
+				D90937682C105FA800B5B69F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D90937692C105FA800B5B69F /* Build configuration list for PBXNativeTarget "MotorcycleLoan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D909376A2C105FA800B5B69F /* Debug */,
+				D909376B2C105FA800B5B69F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D909376C2C105FA800B5B69F /* Build configuration list for PBXNativeTarget "MotorcycleLoanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D909376D2C105FA800B5B69F /* Debug */,
+				D909376E2C105FA800B5B69F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D909376F2C105FA800B5B69F /* Build configuration list for PBXNativeTarget "MotorcycleLoanUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D90937702C105FA800B5B69F /* Debug */,
+				D90937712C105FA800B5B69F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D90937372C105FA700B5B69F /* Project object */;
+}

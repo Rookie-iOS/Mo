@@ -1,0 +1,43 @@
+{
+  "name": "AAILiveness",
+  "version": "3.0.4",
+  "summary": "iOS AAILivenessSDK.",
+  "description": "AAILivenessSDK AAILivenessSDK AAILivenessSDK AAILivenessSDK",
+  "homepage": "https://www.advance.ai",
+  "license": {
+    "type": "example",
+    "text": "                      \n"
+  },
+  "authors": "advance.ai",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source": {
+    "http": "http://your-host/AAILivenessSDK.zip"
+  },
+  "vendored_frameworks": "AAILivenessSDK/AAILivenessSDK.xcframework",
+  "resources": "AAILivenessSDK/Resource/*.bundle",
+  "ios": {
+    "source_files": "AAILivenessSDK/AAILiveness/*.{h,m}",
+    "libraries": [
+      "c++",
+      "z",
+      "resolv.9"
+    ]
+  },
+  "frameworks": [
+    "AVFoundation",
+    "CoreMotion",
+    "CoreGraphics",
+    "CoreTelephony",
+    "SystemConfiguration",
+    "Accelerate",
+    "Metal",
+    "MetalKit"
+  ],
+  "dependencies": {
+    "AAINetwork": [
+
+    ]
+  }
+}

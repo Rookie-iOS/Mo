@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Moto_LoanRepayItemView" customModule="MotorcycleLoan" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="211"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHa-dl-vMd">
+                    <rect key="frame" x="13" y="75" width="0.0" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="19" id="57S-WK-G2U"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVt-J4-MHC">
+                    <rect key="frame" x="380" y="75" width="0.0" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="19" id="d6W-db-hNE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4R-Cw-wJo">
+                    <rect key="frame" x="13" y="102" width="0.0" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="WBy-Wl-pRm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.63921568630000003" green="0.6588235294" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="JHa-dl-vMd" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="0vv-R1-kKS"/>
+                <constraint firstItem="dVt-J4-MHC" firstAttribute="centerY" secondItem="JHa-dl-vMd" secondAttribute="centerY" id="PXB-7d-tTd"/>
+                <constraint firstItem="Q4R-Cw-wJo" firstAttribute="top" secondItem="JHa-dl-vMd" secondAttribute="bottom" constant="8" id="U9r-Bx-jxO"/>
+                <constraint firstItem="JHa-dl-vMd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="13" id="bZ4-fx-taZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Q4R-Cw-wJo" secondAttribute="bottom" priority="750" constant="16" id="flk-va-aUj"/>
+                <constraint firstItem="Q4R-Cw-wJo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="13" id="gpM-jH-bmX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dVt-J4-MHC" secondAttribute="trailing" constant="13" id="kQ9-ld-4fr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="amountText" destination="dVt-J4-MHC" id="F46-Kz-a7t"/>
+                <outlet property="repaymentDateText" destination="Q4R-Cw-wJo" id="yJH-V6-GeW"/>
+                <outlet property="titleText" destination="JHa-dl-vMd" id="Lfa-aC-rFA"/>
+            </connections>
+            <point key="canvasLocation" x="94" y="168"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

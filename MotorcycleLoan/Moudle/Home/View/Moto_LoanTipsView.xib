@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Moto_LoanTipsView" customModule="MotorcycleLoan" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="389" height="203"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNr-o5-RtT">
+                    <rect key="frame" x="0.0" y="59" width="389" height="76"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you repay the first two installments on time, the fees for the third and subsequent installments will be waived." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxg-om-3Bw">
+                            <rect key="frame" x="12" y="12" width="365" height="52"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.93725490199999995" green="0.62745098040000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.93725490196078431" green="0.62745098039215685" blue="0.0" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="76" id="59z-cc-kLw"/>
+                        <constraint firstItem="Hxg-om-3Bw" firstAttribute="top" secondItem="XNr-o5-RtT" secondAttribute="top" constant="12" id="GtV-8b-oJn"/>
+                        <constraint firstAttribute="bottom" secondItem="Hxg-om-3Bw" secondAttribute="bottom" constant="12" id="Ils-6e-jd7"/>
+                        <constraint firstItem="Hxg-om-3Bw" firstAttribute="leading" secondItem="XNr-o5-RtT" secondAttribute="leading" constant="12" id="cmN-vb-3l8"/>
+                        <constraint firstAttribute="trailing" secondItem="Hxg-om-3Bw" secondAttribute="trailing" constant="12" id="oQa-AA-0Bj"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="XNr-o5-RtT" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" priority="750" id="TVo-8I-Dfu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XNr-o5-RtT" secondAttribute="trailing" id="lFB-Ey-e6I"/>
+                <constraint firstItem="XNr-o5-RtT" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="xtq-jG-EoV"/>
+                <constraint firstItem="XNr-o5-RtT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yvV-zm-C9c"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="20.610687022900763" y="-258.80281690140845"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
