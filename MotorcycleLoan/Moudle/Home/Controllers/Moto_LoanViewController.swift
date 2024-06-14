@@ -20,7 +20,6 @@ class Moto_LoanViewController: Moto_ViewController {
      **/
     
     private var isReloan = false
-    private var canClick = true
     var bingingStatus: Int = 1
     var product: Moto_ProductModel?
     private var pay_type = 2
@@ -454,18 +453,20 @@ class Moto_LoanViewController: Moto_ViewController {
             "moto_pay_type": pay_type,
             "check_type": bingingStatus,
         ]
+        
         WisdomHUD.showLoading(text: "")
         Moto_Networking.request(path: Moto_Apis.Moto_api_submit_loan, method: .post, params: params) { [weak self] data in
-            WisdomHUD.dismiss()
-            self?.canClick = true
-            guard let self = self else { return }
-            guard let jsonData = data else { return }
-            guard let model = try? JSONDecoder().decode(Moto_BaseModel<Moto_LoanSuccessModel>.self, from: jsonData) else { return }
+            guard let self = self else { WisdomHUD.dismiss(); return }
+            guard let jsonData = data else { WisdomHUD.dismiss(); return }
+            guard let model = try? JSONDecoder().decode(Moto_BaseModel<Moto_LoanSuccessModel>.self, from: jsonData) else { WisdomHUD.dismiss(); return }
             if model.code == 200 {
                 loanSuccess()
+                WisdomHUD.dismiss()
                 guard let oid = model.data?.oid, let deta_id = model.data?.deta_id else { return }
                 Moto_UploadRisk.uploadRKData(1, oid, deta_id)
             }else {
+                WisdomHUD.dismiss()
+                navigationController?.popToRootViewController(animated: true)
                 WisdomHUD.showTextCenter(text: model.error ?? "").setFocusing()
             }
         }
@@ -493,7 +494,7 @@ class Moto_LoanViewController: Moto_ViewController {
     
     private func getMoney(_ passwd: String, _ code: String? = nil) {
         
-        guard let pid = product?.id else { self.canClick = true; return }
+        guard let pid = product?.id else { WisdomHUD.dismiss(); return }
         var params: [String: Any] = [
             "moto_tid": selectTermModel?.term_id ?? "",
             "moto_money": selectInfoModel?.amount ?? 0,
@@ -516,36 +517,34 @@ class Moto_LoanViewController: Moto_ViewController {
             params["moto_days"] = selectTermModel?.days ?? ""
             params["moto_risk_data"] = Moto_UploadRisk.riskModelString() ?? ""
         }else {
-            guard let wcid = userAccount?.wcid else { canClick = true; return }
-            guard let accountNo = userAccount?.account_no else { canClick = true; return }
+            guard let wcid = userAccount?.wcid else { WisdomHUD.dismiss(); return }
+            guard let accountNo = userAccount?.account_no else { WisdomHUD.dismiss(); return }
             url = Moto_Apis.Moto_api_ewallet_loan
             params["moto_wid"] = wcid
             params["moto_acc_number"] = accountNo
             params["moto_pay_days"] = selectTermModel?.days ?? ""
             params["moto_risk_datas"] = Moto_UploadRisk.riskModelString() ?? ""
         }
-        
-        WisdomHUD.showLoading(text: "")
+
         Moto_Networking.request(path: url, method: .post, params: params) { [weak self] data in
             WisdomHUD.dismiss()
-            guard let self = self else { self?.canClick = true; return }
-            guard let jsonData = data else { self.canClick = true; return }
-            guard let model = try? JSONDecoder().decode(Moto_BaseModel<Moto_LoanSuccessModel>.self, from: jsonData) else { canClick = true; return }
+            guard let self = self else { return }
+            guard let jsonData = data else { return }
+            guard let model = try? JSONDecoder().decode(Moto_BaseModel<Moto_LoanSuccessModel>.self, from: jsonData) else { return }
             if model.code == 200 {
                 isReloan = true
-                canClick = true
                 loanSuccess()
                 guard let oid = model.data?.oid, let deta_id = model.data?.deta_id else { return }
                 Moto_UploadRisk.uploadRKData(2, oid, deta_id)
             }else {
-                canClick = true
+                navigationController?.popToRootViewController(animated: true)
                 WisdomHUD.showTextCenter(text: model.error ?? "").setFocusing()
             }
         }
     }
     
     private func showCodeView(_ passwd: String) {
-        guard let codeView = R.nib.moto_LoanSmsCodeView.firstView(withOwner: nil) else { canClick = true; return }
+        guard let codeView = R.nib.moto_LoanSmsCodeView.firstView(withOwner: nil) else { return }
         codeView.show { [weak self] code in
             guard let self = self else { return }
             getMoney(passwd,code)
@@ -554,7 +553,7 @@ class Moto_LoanViewController: Moto_ViewController {
     
     private func checkDevice(_ passwd: String) {
         // moto_pay_type: 1: 电子钱包 2：银行卡
-        guard let account_no = userAccount?.account_no else { canClick = true; return }
+        guard let account_no = userAccount?.account_no else { return }
         let type = pay_type == 1 ? 2 : 1
         let params: [String: Any] = [
             "moto_pay_type": type,
@@ -563,12 +562,11 @@ class Moto_LoanViewController: Moto_ViewController {
         ]
         WisdomHUD.showLoading(text: "")
         Moto_Networking.request(path: Moto_Apis.Moto_api_loan_check_device, method: .post, params: params) { [weak self] data in
-            WisdomHUD.dismiss()
-            guard let self = self else { self?.canClick = true; return }
-            guard let jsonData = data else { canClick = true; return }
-            guard let model = try? JSONDecoder().decode(Moto_BaseModel<MO_LoginCheckModel>.self, from: jsonData) else { canClick = true; return }
+            guard let self = self else { WisdomHUD.dismiss(); return }
+            guard let jsonData = data else { WisdomHUD.dismiss(); return }
+            guard let model = try? JSONDecoder().decode(Moto_BaseModel<MO_LoginCheckModel>.self, from: jsonData) else { WisdomHUD.dismiss(); return }
             if model.code == 200 {
-                guard let data = model.data else { canClick = true; return }
+                guard let data = model.data else { WisdomHUD.dismiss(); return }
                 if data.code_type == 1 {
                     // 直接提款
                     getMoney(passwd)
@@ -577,7 +575,7 @@ class Moto_LoanViewController: Moto_ViewController {
                     showCodeView(passwd)
                 }
             }else {
-                canClick = true
+                WisdomHUD.dismiss()
                 WisdomHUD.showTextCenter(text: model.error ?? "").setFocusing()
             }
         }
@@ -643,12 +641,6 @@ class Moto_LoanViewController: Moto_ViewController {
                 return
             }
             guard let status = product?.status else { return }
-            
-            if !canClick {
-                return
-            }
-            
-            canClick = true
             if status == 12 {
                 loanSubmit()
             }else if (status == 3 || status == 10) {

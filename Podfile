@@ -18,10 +18,6 @@ target 'MotorcycleLoan' do
   pod 'SwiftPageView', '~> 0.9.0'
   pod 'DYFCryptoUtils', '~> 1.0.2'
   pod 'KeychainAccess', '~> 4.2.2'
-  
-  pod 'FirebaseAnalytics'
-  pod 'FirebaseCrashlytics'
-  
   pod 'IQKeyboardManagerSwift', '~> 7.0.2'
   pod 'AAINetwork', :http => 'https://prod-guardian-cv.oss-ap-southeast-5.aliyuncs.com/sdk/iOS-libraries/AAINetwork/AAINetwork-V1.0.1.tar.bz2', type: :tbz
   pod 'AAILiveness', :http => 'https://prod-guardian-cv.oss-ap-southeast-5.aliyuncs.com/sdk/iOS-liveness-detection/3.0.4/iOS-Liveness-SDK-V3.0.4.tar.bz2', type: :tbz
