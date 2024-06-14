@@ -245,13 +245,20 @@ class Moto_RepayViewController: Moto_ViewController {
                 // 默认选中第一期
                 term.canEnable = (idx != 0)
                 if idx == 1 {
-                    term.canEnable = is_ins_repay == 1
+                    if list.count == 6 {
+                        // 新用户还完一期后不会显示一期数据
+                        term.canEnable = is_ins_repay == 1
+                    }
                 }
                 terms.append(term)
             }
             let term = Moto_RepayTermDataModel()
             term.num = -100
-            terms.insert(term, at: 2)
+            if list.count == 6 {
+                terms.insert(term, at: 2)
+            }else {
+                terms.insert(term, at: 1)
+            }
         }
         layoutTermView()
     }
