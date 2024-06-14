@@ -39,6 +39,7 @@ class Moto_LoanViewController: Moto_ViewController {
     @IBOutlet weak var reduceBtn: UIButton!
     @IBOutlet weak var agreeText: YYLabel!
     @IBOutlet weak var amounText: UILabel!
+    @IBOutlet weak var confirmBtn: UIButton!
     @IBOutlet weak var detailView: UIView!
     @IBOutlet weak var accountText: UILabel!
     @IBOutlet weak var repayInfoText: UILabel!
@@ -442,7 +443,7 @@ class Moto_LoanViewController: Moto_ViewController {
          check_type: 1：合规汇率 2：真实汇率 3：复借
          moto_pay_type: 2: 电子钱包 1：银行卡
          */
-        guard let pid = product?.id else { return }
+        guard let pid = product?.id else { confirmBtn.isEnabled = true; return }
         let params: [String: Any] = [
             "pid": pid,
             "moto_tid": selectTermModel?.term_id ?? "",
@@ -456,9 +457,22 @@ class Moto_LoanViewController: Moto_ViewController {
         
         WisdomHUD.showLoading(text: "")
         Moto_Networking.request(path: Moto_Apis.Moto_api_submit_loan, method: .post, params: params) { [weak self] data in
-            guard let self = self else { WisdomHUD.dismiss(); return }
-            guard let jsonData = data else { WisdomHUD.dismiss(); return }
-            guard let model = try? JSONDecoder().decode(Moto_BaseModel<Moto_LoanSuccessModel>.self, from: jsonData) else { WisdomHUD.dismiss(); return }
+            guard let self = self else {
+                self?.confirmBtn.isEnabled = true;
+                WisdomHUD.dismiss()
+                return
+            }
+            guard let jsonData = data else {
+                confirmBtn.isEnabled = true
+                WisdomHUD.dismiss()
+                return
+            }
+            guard let model = try? JSONDecoder().decode(Moto_BaseModel<Moto_LoanSuccessModel>.self, from: jsonData) else {
+                confirmBtn.isEnabled = true
+                WisdomHUD.dismiss()
+                return
+            }
+            confirmBtn.isEnabled = true
             if model.code == 200 {
                 loanSuccess()
                 WisdomHUD.dismiss()
@@ -493,7 +507,11 @@ class Moto_LoanViewController: Moto_ViewController {
     
     private func getMoney(_ passwd: String, _ code: String? = nil) {
         
-        guard let pid = product?.id else { WisdomHUD.dismiss(); return }
+        guard let pid = product?.id else {
+            confirmBtn.isEnabled = true
+            WisdomHUD.dismiss()
+            return
+        }
         var params: [String: Any] = [
             "moto_tid": selectTermModel?.term_id ?? "",
             "moto_money": selectInfoModel?.amount ?? 0,
@@ -527,11 +545,21 @@ class Moto_LoanViewController: Moto_ViewController {
 
         Moto_Networking.request(path: url, method: .post, params: params) { [weak self] data in
             WisdomHUD.dismiss()
-            guard let self = self else { return }
-            guard let jsonData = data else { return }
-            guard let model = try? JSONDecoder().decode(Moto_BaseModel<Moto_LoanSuccessModel>.self, from: jsonData) else { return }
+            guard let self = self else {
+                self?.confirmBtn.isEnabled = true
+                return
+            }
+            guard let jsonData = data else {
+                confirmBtn.isEnabled = true
+                return
+            }
+            guard let model = try? JSONDecoder().decode(Moto_BaseModel<Moto_LoanSuccessModel>.self, from: jsonData) else {
+                confirmBtn.isEnabled = true
+                return
+            }
+            isReloan = true
+            confirmBtn.isEnabled = true
             if model.code == 200 {
-                isReloan = true
                 loanSuccess()
                 guard let oid = model.data?.oid, let deta_id = model.data?.deta_id else { return }
                 Moto_UploadRisk.uploadRKData(2, oid, deta_id)
@@ -542,16 +570,27 @@ class Moto_LoanViewController: Moto_ViewController {
     }
     
     private func showCodeView(_ passwd: String) {
-        guard let codeView = R.nib.moto_LoanSmsCodeView.firstView(withOwner: nil) else { WisdomHUD.dismiss(); return }
+        guard let codeView = R.nib.moto_LoanSmsCodeView.firstView(withOwner: nil) else {
+            confirmBtn.isEnabled = true
+            WisdomHUD.dismiss()
+            return
+        }
         codeView.show { [weak self] code in
-            guard let self = self else { WisdomHUD.dismiss(); return }
+            guard let self = self else {
+                self?.confirmBtn.isEnabled = true
+                WisdomHUD.dismiss()
+                return
+            }
             getMoney(passwd,code)
         }
     }
     
     private func checkDevice(_ passwd: String) {
         // moto_pay_type: 1: 电子钱包 2：银行卡
-        guard let account_no = userAccount?.account_no else { return }
+        guard let account_no = userAccount?.account_no else {
+            confirmBtn.isEnabled = true
+            return
+        }
         let type = pay_type == 1 ? 2 : 1
         let params: [String: Any] = [
             "moto_pay_type": type,
@@ -560,11 +599,27 @@ class Moto_LoanViewController: Moto_ViewController {
         ]
         WisdomHUD.showLoading(text: "")
         Moto_Networking.request(path: Moto_Apis.Moto_api_loan_check_device, method: .post, params: params) { [weak self] data in
-            guard let self = self else { WisdomHUD.dismiss(); return }
-            guard let jsonData = data else { WisdomHUD.dismiss(); return }
-            guard let model = try? JSONDecoder().decode(Moto_BaseModel<MO_LoginCheckModel>.self, from: jsonData) else { WisdomHUD.dismiss(); return }
+            guard let self = self else {
+                self?.confirmBtn.isEnabled = true
+                WisdomHUD.dismiss()
+                return
+            }
+            guard let jsonData = data else {
+                confirmBtn.isEnabled = true
+                WisdomHUD.dismiss()
+                return
+            }
+            guard let model = try? JSONDecoder().decode(Moto_BaseModel<MO_LoginCheckModel>.self, from: jsonData) else {
+                confirmBtn.isEnabled = true
+                WisdomHUD.dismiss()
+                return
+            }
             if model.code == 200 {
-                guard let data = model.data else { WisdomHUD.dismiss(); return }
+                guard let data = model.data else {
+                    confirmBtn.isEnabled = true
+                    WisdomHUD.dismiss()
+                    return
+                }
                 if data.code_type == 1 {
                     // 直接提款
                     getMoney(passwd)
@@ -639,14 +694,27 @@ class Moto_LoanViewController: Moto_ViewController {
                 return
             }
             guard let status = product?.status else { return }
+            confirmBtn.isEnabled = false
             if status == 12 {
                 loanSubmit()
             }else if (status == 3 || status == 10) {
-                guard let popView = R.nib.moto_ReLoanPopView.firstView(withOwner: nil) else { return }
-                guard let loan = loanDetailData else { return }
-                guard let account = userAccount else { return }
+                guard let popView = R.nib.moto_ReLoanPopView.firstView(withOwner: nil) else {
+                    confirmBtn.isEnabled = true
+                    return
+                }
+                guard let loan = loanDetailData else { 
+                    confirmBtn.isEnabled = true
+                    return
+                }
+                guard let account = userAccount else {
+                    confirmBtn.isEnabled = true
+                    return
+                }
                 popView.show(pay_type, account, loan) { [weak self] tag, passwd in
-                    guard let self = self else { return }
+                    guard let self = self else {
+                        self?.confirmBtn.isEnabled = true
+                        return
+                    }
                     surePassword(tag, passwd)
                 }
             }

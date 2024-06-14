@@ -34,12 +34,17 @@ class Moto_RepayViewController: Moto_ViewController {
     var product: Moto_ProductModel?
     private var terms = [Moto_RepayTermDataModel]()
     private var repayModel: Moto_HomeRepayModel? = nil
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         loadUI()
-        loadData()
     }
     
     private func loadUI() {
