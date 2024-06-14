@@ -536,7 +536,6 @@ class Moto_LoanViewController: Moto_ViewController {
                 guard let oid = model.data?.oid, let deta_id = model.data?.deta_id else { return }
                 Moto_UploadRisk.uploadRKData(2, oid, deta_id)
             }else {
-                navigationController?.popToRootViewController(animated: true)
                 WisdomHUD.showTextCenter(text: model.error ?? "").setFocusing()
             }
         }
