@@ -466,7 +466,6 @@ class Moto_LoanViewController: Moto_ViewController {
                 Moto_UploadRisk.uploadRKData(1, oid, deta_id)
             }else {
                 WisdomHUD.dismiss()
-                navigationController?.popToRootViewController(animated: true)
                 WisdomHUD.showTextCenter(text: model.error ?? "").setFocusing()
             }
         }
@@ -544,9 +543,9 @@ class Moto_LoanViewController: Moto_ViewController {
     }
     
     private func showCodeView(_ passwd: String) {
-        guard let codeView = R.nib.moto_LoanSmsCodeView.firstView(withOwner: nil) else { return }
+        guard let codeView = R.nib.moto_LoanSmsCodeView.firstView(withOwner: nil) else { WisdomHUD.dismiss(); return }
         codeView.show { [weak self] code in
-            guard let self = self else { return }
+            guard let self = self else { WisdomHUD.dismiss(); return }
             getMoney(passwd,code)
         }
     }
