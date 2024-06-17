@@ -143,26 +143,6 @@ class Moto_RepaymentViewController: Moto_ViewController {
         }
     }
     
-    override func backAction() {
-        WisdomHUD.showLoading(text: "")
-        Moto_Networking.request(path: Moto_Apis.Moto_api_home, method: .post) { [weak self] data in
-            WisdomHUD.dismiss()
-            guard let self = self else { self?.navigationController?.popViewController(animated: true); return }
-            guard let jsonData = data else { navigationController?.popViewController(animated: true); return }
-            guard let _homeModel = try? JSONDecoder().decode(Moto_HomeDataModel.self, from: jsonData) else { navigationController?.popViewController(animated: true); return }
-            if _homeModel.code == 200 {
-                guard let product = _homeModel.data.first else { navigationController?.popViewController(animated: true); return }
-                if product.status != 5 {
-                    navigationController?.popToRootViewController(animated: true)
-                }else {
-                    navigationController?.popViewController(animated: true)
-                }
-            }else {
-                navigationController?.popViewController(animated: true)
-            }
-        }
-    }
-    
     private func startPay() {
         
         guard let _repayModel = repayModel else { return }

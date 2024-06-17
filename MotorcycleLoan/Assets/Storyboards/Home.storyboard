@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="259"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Morning！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seA-M9-fcb">
-                                        <rect key="frame" x="13" y="67" width="138.66666666666666" height="21"/>
+                                        <rect key="frame" x="13" y="67" width="148.66666666666666" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="3RU-bI-kqY"/>
                                         </constraints>
@@ -414,7 +414,7 @@
                                                 <rect key="frame" x="13" y="270" width="367" height="105"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smile Certification (Optional）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwe-U4-iI5">
-                                                        <rect key="frame" x="15" y="21" width="206" height="18"/>
+                                                        <rect key="frame" x="15" y="21" width="213.66666666666666" height="18"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="18" id="8qJ-Ak-kDu"/>
                                                         </constraints>
@@ -2495,7 +2495,7 @@
                         <outlet property="agreeBtn" destination="YgV-pW-ksB" id="CJH-yg-eIX"/>
                         <outlet property="agreeText" destination="Fmj-Uf-dJA" id="o3Q-YA-COW"/>
                         <outlet property="amounText" destination="2Cu-8l-7G7" id="7CC-Og-ypn"/>
-                        <outlet property="confirmBtn" destination="cFd-24-mGw" id="vja-9l-mq8"/>
+                        <outlet property="confirmBtn" destination="cFd-24-mGw" id="w0s-vi-0Dn"/>
                         <outlet property="detailAmountText" destination="H6t-0F-0wd" id="erg-fv-jy1"/>
                         <outlet property="detailInfoIcon" destination="ri5-La-ZoF" id="itU-JZ-eTS"/>
                         <outlet property="detailInterestText" destination="ek6-1X-lLx" id="5og-W8-0X4"/>

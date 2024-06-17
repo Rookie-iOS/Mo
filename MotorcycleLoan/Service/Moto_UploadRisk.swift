@@ -63,7 +63,7 @@ struct Moto_UploadRisk {
                 guard let jsonData = data else { return }
                 guard let model = try? JSONDecoder().decode(Moto_BaseModel<Moto_DataModel>.self, from: jsonData) else { return }
                 if model.code == 200 {
-                    print("Success")
+                    MotoLog("Success")
                 }
             }
         }

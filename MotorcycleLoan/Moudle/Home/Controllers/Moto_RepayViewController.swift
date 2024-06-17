@@ -40,6 +40,7 @@ class Moto_RepayViewController: Moto_ViewController {
         // Do any additional setup after loading the view.
         
         loadUI()
+        loadData()
     }
     
     private func loadUI() {

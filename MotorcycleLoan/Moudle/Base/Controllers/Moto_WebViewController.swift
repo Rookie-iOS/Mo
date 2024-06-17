@@ -136,7 +136,7 @@ class Moto_WebViewController: Moto_ViewController {
                 navigationController?.popToRootViewController(animated: true)
             }else {
                 navigationController?.popViewController(animated: true)
-                
+
             }
         }
     }
