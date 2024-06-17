@@ -163,7 +163,6 @@
 		D9D655E82C11910B00741DD7 /* Moto_HomeFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9D655E72C11910B00741DD7 /* Moto_HomeFooter.xib */; };
 		D9D655EB2C1192EC00741DD7 /* Moto_HomeBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D655EA2C1192EC00741DD7 /* Moto_HomeBanner.swift */; };
 		D9D655ED2C11948100741DD7 /* Moto_WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D655EC2C11948100741DD7 /* Moto_WebViewController.swift */; };
-		D9F0DC842C1AFF3F006246CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9F0DC832C1AFF3F006246CC /* GoogleService-Info.plist */; };
 		D9F7C2C32C1188C5007CC599 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9F7C2C22C1188C5007CC599 /* Register.storyboard */; };
 		D9F7C2C62C118A38007CC599 /* Moto_BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7C2C52C118A38007CC599 /* Moto_BaseView.swift */; };
 		D9F7C2C92C118B51007CC599 /* Moto_HomeFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7C2C82C118B51007CC599 /* Moto_HomeFooter.swift */; };
@@ -354,8 +353,6 @@
 		D9D655E72C11910B00741DD7 /* Moto_HomeFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Moto_HomeFooter.xib; sourceTree = "<group>"; };
 		D9D655EA2C1192EC00741DD7 /* Moto_HomeBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_HomeBanner.swift; sourceTree = "<group>"; };
 		D9D655EC2C11948100741DD7 /* Moto_WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_WebViewController.swift; sourceTree = "<group>"; };
-		D9F0DC812C1AF330006246CC /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		D9F0DC832C1AFF3F006246CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D9F7C2C22C1188C5007CC599 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		D9F7C2C52C118A38007CC599 /* Moto_BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_BaseView.swift; sourceTree = "<group>"; };
 		D9F7C2C82C118B51007CC599 /* Moto_HomeFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_HomeFooter.swift; sourceTree = "<group>"; };
@@ -403,7 +400,6 @@
 		D90937362C105FA700B5B69F = {
 			isa = PBXGroup;
 			children = (
-				D9F0DC812C1AF330006246CC /* PrivacyInfo.xcprivacy */,
 				D90937412C105FA700B5B69F /* MotorcycleLoan */,
 				D90937582C105FA800B5B69F /* MotorcycleLoanTests */,
 				D90937622C105FA800B5B69F /* MotorcycleLoanUITests */,
@@ -426,7 +422,6 @@
 		D90937412C105FA700B5B69F /* MotorcycleLoan */ = {
 			isa = PBXGroup;
 			children = (
-				D9F0DC832C1AFF3F006246CC /* GoogleService-Info.plist */,
 				D90937732C1064D800B5B69F /* Main */,
 				D90937762C1067C900B5B69F /* Assets */,
 				D98500092C10A26F00474CFF /* Vender */,
@@ -1001,7 +996,6 @@
 				D994C4BC2C14313F0074A0F0 /* Moto_HomeRepayCell.xib in Resources */,
 				D92188F72C175CEB00407EEE /* Moto_RepayTipsView.xib in Resources */,
 				D92189232C17743E00407EEE /* Moto_InputPassWordView.xib in Resources */,
-				D9F0DC842C1AFF3F006246CC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1462,12 +1456,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2GVJAA557F;
+				DEVELOPMENT_TEAM = 2H3PC8SBB4;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MotorcycleLoan/Main/Info.plist;
@@ -1484,10 +1476,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.relyns.asiasource.MotorcycleLoan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rookie.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Publish;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
