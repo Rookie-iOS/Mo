@@ -37,6 +37,7 @@ struct Moto_UploadRisk {
             let time_zone_id = TimeZone.current.abbreviation() ?? ""
             let imei = DYFCryptoUtils.md5EncodedString(Moto_Utils.uuid())
             let serial_number = DYFCryptoUtils.md5EncodedString(Moto_Utils.uuid())
+            let timeZone = NSTimeZone.system
         }
 
         static func riskModelString() -> String? {

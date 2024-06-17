@@ -54,16 +54,12 @@ class Moto_LoanViewController: Moto_ViewController {
     @IBOutlet weak var detailInterestText: UILabel!
     @IBOutlet weak var detailViewHeight: NSLayoutConstraint!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        loadData()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         loadUI()
+        loadData()
         showDetail()
     }
     
