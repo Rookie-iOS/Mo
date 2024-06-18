@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F3319122C218D4C00B6E922 /* Moto_EventRisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3319112C218D4C00B6E922 /* Moto_EventRisk.swift */; };
 		63DA10840609969F038D63DF /* Pods_MotorcycleLoan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B65BE01BC84C855F6BC4CC7 /* Pods_MotorcycleLoan.framework */; };
 		94C3D6C63507D253535EC6F8 /* Pods_MotorcycleLoanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F2193097055AB0E7DA4366 /* Pods_MotorcycleLoanTests.framework */; };
 		D90937432C105FA700B5B69F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90937422C105FA700B5B69F /* AppDelegate.swift */; };
@@ -188,6 +189,7 @@
 
 /* Begin PBXFileReference section */
 		119E7D39D5187724C0FDAAB1 /* Pods_MotorcycleLoan_MotorcycleLoanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotorcycleLoan_MotorcycleLoanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F3319112C218D4C00B6E922 /* Moto_EventRisk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto_EventRisk.swift; sourceTree = "<group>"; };
 		2BA8CF05A1F9D68544638FD7 /* Pods-MotorcycleLoan-MotorcycleLoanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorcycleLoan-MotorcycleLoanUITests.release.xcconfig"; path = "Target Support Files/Pods-MotorcycleLoan-MotorcycleLoanUITests/Pods-MotorcycleLoan-MotorcycleLoanUITests.release.xcconfig"; sourceTree = "<group>"; };
 		38BADF1FADF68B94A4E68B55 /* Pods-MotorcycleLoan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorcycleLoan.debug.xcconfig"; path = "Target Support Files/Pods-MotorcycleLoan/Pods-MotorcycleLoan.debug.xcconfig"; sourceTree = "<group>"; };
 		630C1BDDD2383C1DAFE448B7 /* Pods-MotorcycleLoan-MotorcycleLoanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotorcycleLoan-MotorcycleLoanUITests.debug.xcconfig"; path = "Target Support Files/Pods-MotorcycleLoan-MotorcycleLoanUITests/Pods-MotorcycleLoan-MotorcycleLoanUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -570,6 +572,7 @@
 				D98500192C10B29200474CFF /* Moto_Apis.swift */,
 				D985001B2C10B3CC00474CFF /* Moto_Networking.swift */,
 				D98500262C10B87300474CFF /* Moto_UploadRisk.swift */,
+				1F3319112C218D4C00B6E922 /* Moto_EventRisk.swift */,
 				D98500202C10B69E00474CFF /* Moto_AddressParse.swift */,
 			);
 			path = Service;
@@ -1216,6 +1219,7 @@
 				D97570C42C148CD100E1D435 /* Moto_HomeRepayCell.swift in Sources */,
 				D987FCE52C16DDEE00464859 /* Moto_JobViewController.swift in Sources */,
 				D987FCE12C16DB2F00464859 /* Moto_CancelPopView.swift in Sources */,
+				1F3319122C218D4C00B6E922 /* Moto_EventRisk.swift in Sources */,
 				D96ACB082C15E41D0065C622 /* Moto_LoanDetailModel.swift in Sources */,
 				D96ACB162C15F57C0065C622 /* Moto_ReLoanPopView.swift in Sources */,
 				D98500182C10AF2600474CFF /* Device+Ext.swift in Sources */,
