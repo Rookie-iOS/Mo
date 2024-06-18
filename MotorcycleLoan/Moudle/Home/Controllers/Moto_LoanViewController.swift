@@ -637,6 +637,7 @@ class Moto_LoanViewController: Moto_ViewController {
             forget.fromLoanPage = true
             navigationController?.pushViewController(forget, animated: true)
         case 400:
+            confirmBtn.isEnabled = true
             checkDevice(passwd)
         default:
             break
@@ -689,25 +690,21 @@ class Moto_LoanViewController: Moto_ViewController {
                 return
             }
             guard let status = product?.status else { return }
-            confirmBtn.isEnabled = false
             if status == 12 {
+                confirmBtn.isEnabled = false
                 loanSubmit()
             }else if (status == 3 || status == 10) {
                 guard let popView = R.nib.moto_ReLoanPopView.firstView(withOwner: nil) else {
-                    confirmBtn.isEnabled = true
                     return
                 }
                 guard let loan = loanDetailData else {
-                    confirmBtn.isEnabled = true
                     return
                 }
                 guard let account = userAccount else {
-                    confirmBtn.isEnabled = true
                     return
                 }
                 popView.show(pay_type, account, loan) { [weak self] tag, passwd in
                     guard let self = self else {
-                        self?.confirmBtn.isEnabled = true
                         return
                     }
                     surePassword(tag, passwd)

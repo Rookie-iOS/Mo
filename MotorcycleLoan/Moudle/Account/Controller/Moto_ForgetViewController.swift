@@ -60,8 +60,9 @@ class Moto_ForgetViewController: Moto_ViewController {
         passwdInput.keyboardType = .numberPad
         verificationInput.keyboardType = .numberPad
         
-        if !fromLoanPage {
-            mobileInput.isEnabled = true
+        mobileInput.isEnabled = true
+        if fromLoanPage {
+            mobileInput.isEnabled = false
         }
         mobileInput.text = Moto_Utils.userInfo()?.phone ?? ""
     }
