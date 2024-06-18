@@ -16,6 +16,7 @@ class Moto_AccountPlaceHolder: Moto_BaseView {
     @IBOutlet weak var iconWidth: NSLayoutConstraint!
     @IBOutlet weak var iconHeight: NSLayoutConstraint!
     
+    private var shapeLayer: CAShapeLayer? = nil
     private var _callback: ((Int) -> Void)? = nil
     var type: Int = 1 {
         didSet {
@@ -50,6 +51,9 @@ class Moto_AccountPlaceHolder: Moto_BaseView {
     override func layoutSubviews() {
         
         super.layoutSubviews()
-        addView.addDashedBorder("#25603D".hexColorString(), "#25603D".hexColorString(0.1))
+        if shapeLayer == nil {
+            shapeLayer = addView.addDashedBorder("#25603D".hexColorString(), "#25603D".hexColorString(0.1))
+        }
+        addView.layer.addSublayer(shapeLayer!)
     }
 }

@@ -24,6 +24,7 @@ class Moto_HomeInViewCell: UITableViewCell {
     private var hourGradientLayer: CAGradientLayer? = nil
     private var minGradientLayer: CAGradientLayer? = nil
     private var secGradientLayer: CAGradientLayer? = nil
+    private var shapeLayer: CAShapeLayer? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -54,7 +55,10 @@ class Moto_HomeInViewCell: UITableViewCell {
         minGradientLayer?.frame = minView.bounds
         secGradientLayer?.frame = secView.bounds
         bgView.drawRadiusWithDashLine(at: 180, "#E6E6E6".hexColorString())
-        waitView.addDashedBorder("#EFA000".hexColorString(), "#EFA000".hexColorString(0.1))
+        if shapeLayer == nil {
+            shapeLayer = waitView.addDashedBorder("#EFA000".hexColorString(), "#EFA000".hexColorString(0.1))
+        }
+        waitView.layer.addSublayer(shapeLayer!)
     }
     
     private func startTimer() {

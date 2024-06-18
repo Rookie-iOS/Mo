@@ -18,6 +18,7 @@ class Moto_AccountListViewController: Moto_ViewController {
     @IBOutlet weak var footerView: UIView!
     @IBOutlet weak var tipsTextHeight: NSLayoutConstraint!
     
+    private var shapeLayer: CAShapeLayer? = nil
     private var accountList = [Moto_UserAccountModel]()
     var changeLoanMethod:((_ account: Moto_UserAccountModel) -> Void)? = nil
     
@@ -35,7 +36,10 @@ class Moto_AccountListViewController: Moto_ViewController {
         
         super.viewDidLayoutSubviews()
         addView.width = Moto_Const.width - 26
-        addView.addDashedBorder("#25603D".hexColorString(), "#25603D".hexColorString(0.1))
+        if shapeLayer == nil {
+            shapeLayer = addView.addDashedBorder("#25603D".hexColorString(), "#25603D".hexColorString(0.1))
+        }
+        addView.layer.addSublayer(shapeLayer!)
         
         let height = footerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
         footerView.height = height

@@ -58,7 +58,7 @@ extension UIView {
         return gradient
     }
     
-    func addDashedBorder(_ lineColor: UIColor, _ fillColor: UIColor) {
+    func addDashedBorder(_ lineColor: UIColor, _ fillColor: UIColor) -> CAShapeLayer {
         let shapeLayer = CAShapeLayer()
         shapeLayer.strokeColor = lineColor.cgColor
         shapeLayer.fillColor = fillColor.cgColor
@@ -66,6 +66,6 @@ extension UIView {
         shapeLayer.path = path.cgPath
         shapeLayer.lineWidth = 0.5
         shapeLayer.lineDashPattern = [6, 3]
-        layer.addSublayer(shapeLayer)
+        return shapeLayer
     }
 }
