@@ -198,9 +198,11 @@ class Moto_AddressInfoViewController: Moto_ViewController {
                 selectView.frame = UIScreen.main.bounds
                 selectView.show(selectModel) { [weak self] select in
                     guard let self = self else { return }
-                    titleView.inputText.text = select.info_title
-                    model.content = select.info_title
-                    cacheModel.hbl = select.info_title
+                    if let _select = select {
+                        titleView.inputText.text = _select.info_title
+                        model.content = _select.info_title
+                        cacheModel.hbl = _select.info_title
+                    }
                     guard let data = try? JSONEncoder().encode(cacheModel) else { return }
                     Moto_Utils.saveData(1, String(data: data, encoding: .utf8))
                 }

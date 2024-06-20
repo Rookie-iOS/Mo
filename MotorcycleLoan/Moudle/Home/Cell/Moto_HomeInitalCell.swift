@@ -59,12 +59,11 @@ class Moto_HomeInitalCell: UITableViewCell {
     
     @IBAction func initalAppyAction() {
         
-//        let photo = R.storyboard.home.moto_custom_photo()!
-//        controller?.navigationController?.pushViewController(photo, animated: true)
-//        return
-        
         guard let model = homeData else { return }
         guard let product = model.data.first else { return }
+        Moto_UploadRisk.eventAtTime("apply_now_time")
+        Moto_UploadRisk.eventBegin("basic_confirm_duration")
+        
         if product.status == 0 || Moto_Utils.userInfo()?.token == nil {
             let login = R.storyboard.register.moto_login()!
             login.hidesBottomBarWhenPushed = true
@@ -93,28 +92,20 @@ class Moto_HomeInitalCell: UITableViewCell {
             }
         }else{
             // 认证列表
-            guard let mobile = Moto_Utils.userInfo()?.phone else { return }
-            let isShow = UserDefaults.standard.bool(forKey: "\(Moto_Const.show_pre_authentication_key)_\(mobile)")
-            if !isShow {
-                let pre_auth = R.storyboard.home.moto_pre_auth()!
-                pre_auth.hidesBottomBarWhenPushed = true
-                controller?.navigationController?.pushViewController(pre_auth, animated: true)
+            guard let authStatus = homeData?.auth_state else { return }
+            // 身份
+            if authStatus.state_two != 1 {
+                let basic = R.storyboard.home.moto_basic()!
+                basic.hidesBottomBarWhenPushed = true
+                controller?.navigationController?.pushViewController(basic, animated: true)
+            }else if(authStatus.state_one != 1) {
+                let face = R.storyboard.home.moto_identify()!
+                face.hidesBottomBarWhenPushed = true
+                controller?.navigationController?.pushViewController(face, animated: true)
             }else {
-                guard let authStatus = homeData?.auth_state else { return }
-                // 身份
-                if authStatus.state_two != 1 {
-                    let basic = R.storyboard.home.moto_basic()!
-                    basic.hidesBottomBarWhenPushed = true
-                    controller?.navigationController?.pushViewController(basic, animated: true)
-                }else if(authStatus.state_one != 1) {
-                    let face = R.storyboard.home.moto_identify()!
-                    face.hidesBottomBarWhenPushed = true
-                    controller?.navigationController?.pushViewController(face, animated: true)
-                }else {
-                    let list = R.storyboard.home.moto_auth_center()!
-                    list.hidesBottomBarWhenPushed = true
-                    controller?.navigationController?.pushViewController(list, animated: true)
-                }
+                let list = R.storyboard.home.moto_auth_center()!
+                list.hidesBottomBarWhenPushed = true
+                controller?.navigationController?.pushViewController(list, animated: true)
             }
         }
     }

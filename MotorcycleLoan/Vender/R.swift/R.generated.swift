@@ -351,9 +351,12 @@ struct _R {
     }
   }
 
-  /// This `_R.file` struct is generated, and contains static references to 2 resource files.
+  /// This `_R.file` struct is generated, and contains static references to 3 resource files.
   struct file {
     let bundle: Foundation.Bundle
+
+    /// Resource file `1111.png`.
+    var png: RswiftResources.FileResource { .init(name: "1111", pathExtension: "png", bundle: bundle, locale: LocaleReference.none) }
 
     /// Resource file `html`.
     var html: RswiftResources.FileResource { .init(name: "html", pathExtension: "", bundle: bundle, locale: LocaleReference.none) }

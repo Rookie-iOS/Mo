@@ -9,6 +9,8 @@ import UIKit
 import WisdomHUD
 
 class Moto_BasicViewController: Moto_ViewController {
+    
+    private var _lastBasicRow: Int = 0
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var scrollIV: UIScrollView!
     private var cacheModel: Moto_CacheModel!
@@ -140,12 +142,16 @@ class Moto_BasicViewController: Moto_ViewController {
         }
         
         autoFillEmailView.isHidden = text.isEmpty || (fillEmialsArray.count == 1 && fillEmialsArray.first == text)
+        if (fillEmialsArray.count == 1 && fillEmialsArray.first == text) {
+            Moto_UploadRisk.eventEnd("email_duration")
+        }
         autoFillEmailView.bindData(fillEmialsArray) { [weak self] email in
             guard let self = self else { return }
             autoFillEmailView.isHidden = true
             textField.text = email
             model.content = email
             cacheModel.email = email
+            Moto_UploadRisk.eventEnd("email_duration")
             guard let data = try? JSONEncoder().encode(cacheModel) else { return }
             Moto_Utils.saveData(1, String(data: data, encoding: .utf8))
         }
@@ -180,9 +186,13 @@ class Moto_BasicViewController: Moto_ViewController {
         guard let text = textField.text else { return }
         switch row {
         case 11:
+            Moto_UploadRisk.eventBegin("email_duration")
+            Moto_UploadRisk.eventCount("emai_updatecount")
             textField.autocorrectionType = .no
             bindAutoFillData(textField)
         case 12:
+            Moto_UploadRisk.eventBegin("facebook_name_duration")
+            Moto_UploadRisk.eventCount("facebook_name_updatecount")
             let model = items[row - 10]
             cacheModel.fbk_name = text
             model.content = text
@@ -193,6 +203,8 @@ class Moto_BasicViewController: Moto_ViewController {
             let model = items[row - 10]
             model.content = text
             cacheModel.whatsapp = text
+            Moto_UploadRisk.eventBegin("messenger_viber_duration")
+            Moto_UploadRisk.eventCount("messenger_viber_updatecount")
         case 14:
             if text.count >= 11 {
                 textField.text = String(text.prefix(11))
@@ -200,9 +212,28 @@ class Moto_BasicViewController: Moto_ViewController {
             let model = items[row - 10]
             model.content = text
             cacheModel.second_mobile = text
+            Moto_UploadRisk.eventBegin("backup_phone_duration")
+            Moto_UploadRisk.eventCount("backup_phone_updatecount")
         default:
             break
         }
+        
+        // Risk data
+        if _lastBasicRow != 0 {
+            if _lastBasicRow != 11 {
+                Moto_UploadRisk.eventEnd("email_duration")
+            }
+            if _lastBasicRow != 12 {
+                Moto_UploadRisk.eventEnd("facebook_name_duration")
+            }
+            if _lastBasicRow != 13 {
+                Moto_UploadRisk.eventEnd("messenger_viber_duration")
+            }
+            if _lastBasicRow != 14 {
+                Moto_UploadRisk.eventEnd("backup_phone_duration")
+            }
+        }
+        _lastBasicRow = row
         guard let data = try? JSONEncoder().encode(self.cacheModel) else { return }
         Moto_Utils.saveData(1, String(data: data, encoding: .utf8))
     }
@@ -246,11 +277,18 @@ class Moto_BasicViewController: Moto_ViewController {
                     }
                     guard let selectView = R.nib.moto_SelectInfoView.firstView(withOwner: nil) else { return }
                     selectView.frame = UIScreen.main.bounds
+                    Moto_UploadRisk.eventBegin("purpose_last_duration")
+                    Moto_UploadRisk.eventBegin("purpose_all_duration", true)
                     selectView.show(selectModel) { [weak self] select in
                         guard let self = self else { return }
-                        titleView.inputText.text = select.info_title
-                        cacheModel.usage_type = select.info_title
-                        model.content = select.info_title
+                        if let _select = select {
+                            titleView.inputText.text = _select.info_title
+                            cacheModel.usage_type = _select.info_title
+                            model.content = _select.info_title
+                        }
+                        Moto_UploadRisk.eventEnd("purpose_last_duration")
+                        Moto_UploadRisk.eventCount("purpose_updatecount")
+                        Moto_UploadRisk.eventEnd("purpose_all_duration", true)
                         guard let data = try? JSONEncoder().encode(cacheModel) else { return }
                         Moto_Utils.saveData(1, String(data: data, encoding: .utf8))
                     }
@@ -266,14 +304,18 @@ class Moto_BasicViewController: Moto_ViewController {
                     }
                     guard let selectView = R.nib.moto_SelectInfoView.firstView(withOwner: nil) else { return }
                     selectView.frame = UIScreen.main.bounds
+                    Moto_UploadRisk.eventBegin("religion_duration")
+                    Moto_UploadRisk.eventCount("religion_updatecount")
                     selectView.show(selectModel) { [weak self] select in
                         guard let self = self else { return }
-                        titleView.inputText.text = select.info_title
-                        model.content = select.info_title
-                        cacheModel.client_religion = select.info_title
+                        if let _select = select {
+                            titleView.inputText.text = _select.info_title
+                            model.content = _select.info_title
+                            cacheModel.client_religion = _select.info_title
+                        }
+                        Moto_UploadRisk.eventEnd("religion_duration")
                         guard let data = try? JSONEncoder().encode(cacheModel) else { return }
                         Moto_Utils.saveData(1, String(data: data, encoding: .utf8))
-                        
                         let index = model.idx - 10
                         if (index + 1) < self.items.count {
                             let model = self.items[index + 1]
@@ -294,11 +336,16 @@ class Moto_BasicViewController: Moto_ViewController {
                     }
                     guard let selectView = R.nib.moto_SelectInfoView.firstView(withOwner: nil) else { return }
                     selectView.frame = UIScreen.main.bounds
+                    Moto_UploadRisk.eventBegin("marry_status_duration")
+                    Moto_UploadRisk.eventCount("marry_status_updatecount")
                     selectView.show(selectModel) { [weak self] select in
                         guard let self = self else { return }
-                        titleView.inputText.text = select.info_title
-                        model.content = select.info_title
-                        cacheModel.merry_state = select.info_title
+                        if let _select = select {
+                            titleView.inputText.text = _select.info_title
+                            model.content = _select.info_title
+                            cacheModel.merry_state = _select.info_title
+                        }
+                        Moto_UploadRisk.eventEnd("marry_status_duration")
                         guard let data = try? JSONEncoder().encode(cacheModel) else { return }
                         Moto_Utils.saveData(1, String(data: data, encoding: .utf8))
                         let index = model.idx - 10
@@ -321,11 +368,16 @@ class Moto_BasicViewController: Moto_ViewController {
                     }
                     guard let selectView = R.nib.moto_SelectInfoView.firstView(withOwner: nil) else { return }
                     selectView.frame = UIScreen.main.bounds
+                    Moto_UploadRisk.eventBegin("kids_num_duration")
+                    Moto_UploadRisk.eventCount("kids_num_update_count")
                     selectView.show(selectModel) { [weak self] select in
                         guard let self = self else { return }
-                        titleView.inputText.text = select.info_title
-                        model.content = select.info_title
-                        cacheModel.kid_number = select.info_title
+                        if let _select = select {
+                            titleView.inputText.text = _select.info_title
+                            model.content = _select.info_title
+                            cacheModel.kid_number = _select.info_title
+                        }
+                        Moto_UploadRisk.eventEnd("kids_num_duration")
                         guard let data = try? JSONEncoder().encode(cacheModel) else { return }
                         Moto_Utils.saveData(1, String(data: data, encoding: .utf8))
                         
@@ -349,11 +401,16 @@ class Moto_BasicViewController: Moto_ViewController {
                     }
                     guard let selectView = R.nib.moto_SelectInfoView.firstView(withOwner: nil) else { return }
                     selectView.frame = UIScreen.main.bounds
+                    Moto_UploadRisk.eventBegin("education_duration")
+                    Moto_UploadRisk.eventCount("education_updatecount")
                     selectView.show(selectModel) { [weak self] select in
                         guard let self = self else { return }
-                        titleView.inputText.text = select.info_title
-                        model.content = select.info_title
-                        cacheModel.eschool = select.info_title
+                        if let _select = select {
+                            titleView.inputText.text = _select.info_title
+                            model.content = _select.info_title
+                            cacheModel.eschool = _select.info_title
+                        }
+                        Moto_UploadRisk.eventEnd("education_duration")
                         guard let data = try? JSONEncoder().encode(cacheModel) else { return }
                         Moto_Utils.saveData(1, String(data: data, encoding: .utf8))
                     }

@@ -68,4 +68,104 @@ struct Moto_UploadRisk {
             }
         }
     }
+    
+    static private func generateRiskEventDict() -> [String: Any]? {
+        var event:Moto_EventRisk!
+        if let dataString = Moto_Utils.cacheData(5) {
+            if !dataString.isEmpty {
+                if let data = dataString.data(using: .utf8) {
+                    event = try! JSONDecoder().decode(Moto_EventRisk.self, from: data)
+                }
+            }else {
+                event = Moto_EventRisk()
+            }
+        }else {
+            event = Moto_EventRisk()
+        }
+        
+        var dict = [String:Any]()
+        let mirr = Mirror(reflecting: event!)
+        for case let (label, value) in mirr.children {
+            guard let key = label else { return nil }
+            dict[key] = value
+        }
+        return dict
+    }
+    
+    // 埋点时间点
+    static func eventAtTime(_ name: String) {
+        guard var dict = generateRiskEventDict() else { return }
+        if dict.keys.contains(name) {
+            dict[name] = Int(Date().timeIntervalSince1970*1000)
+            guard let jsonData = try? JSONSerialization.data(withJSONObject: dict) else { return }
+            guard let dataString = String(data: jsonData, encoding: .utf8) else { return }
+            Moto_Utils.saveData(5, dataString)
+        }
+    }
+    
+    // update value
+    static func eventUpdate(_ name: String, value: Int) {
+        guard var dict = generateRiskEventDict() else { return }
+        if dict.keys.contains(name) {
+            dict[name] = value
+            guard let jsonData = try? JSONSerialization.data(withJSONObject: dict) else { return }
+            guard let dataString = String(data: jsonData, encoding: .utf8) else { return }
+            Moto_Utils.saveData(5, dataString)
+        }
+    }
+    
+    // count number
+    static func eventCount(_ name: String) {
+        guard var dict = generateRiskEventDict() else { return }
+        if dict.keys.contains(name) {
+            guard var count = dict[name] as? Int else { return }
+            if count == -999 {
+                count = 1
+            }else {
+                count += 1
+            }
+            dict[name] = count
+            guard let jsonData = try? JSONSerialization.data(withJSONObject: dict) else { return }
+            guard let dataString = String(data: jsonData, encoding: .utf8) else { return }
+            Moto_Utils.saveData(5, dataString)
+        }
+    }
+    
+    // event risk begin
+    static func eventBegin(_ name: String, _ isToatl: Bool = false) {
+        guard var dict = generateRiskEventDict() else { return }
+        if dict.keys.contains(name) {
+            if isToatl {
+                guard let start = dict[name] as? String else { return }
+                let seps = start.split(separator: "_")
+                dict[name] = "\(Int(Date().timeIntervalSince1970*1000))_\(seps.last ?? "0")"
+            }else {
+                dict[name] = Int(Date().timeIntervalSince1970*1000)
+            }
+            guard let jsonData = try? JSONSerialization.data(withJSONObject: dict) else { return }
+            guard let dataString = String(data: jsonData, encoding: .utf8) else { return }
+            Moto_Utils.saveData(5, dataString)
+        }
+    }
+    
+    // event risk end
+    static func eventEnd(_ name: String, _ isTotal: Bool = false) {
+        guard var dict = generateRiskEventDict() else { return }
+        if dict.keys.contains(name) {
+            if isTotal {
+                guard let infoValue = dict[name] as? String else { return }
+                let time: [String] = infoValue.split(separator: "_").map { String($0) }
+                guard let start = time.first else { return }
+                guard let duration = time.last else { return }
+                dict[name] = "end_\(Int(Date().timeIntervalSince1970 * 1000) - (Int(start) ?? 0) + (Int(duration) ?? 0))"
+            }else {
+                guard let start = dict[name] as? Int else { return }
+                let duration = Int(Date().timeIntervalSince1970 * 1000) - start
+                dict[name] = duration
+            }
+            guard let jsonData = try? JSONSerialization.data(withJSONObject: dict) else { return }
+            guard let dataString = String(data: jsonData, encoding: .utf8) else { return }
+            Moto_Utils.saveData(5, dataString)
+        }
+    }
 }

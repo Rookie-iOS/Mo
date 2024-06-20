@@ -131,8 +131,8 @@ class Moto_AddUserAccountViewController: Moto_ViewController {
                 textField.text = String(text.prefix(length))
             }
         case 64:
-            if text.count > length {
-                textField.text = String(text.prefix(length))
+            if text.count >= 11 {
+                textField.text = String(text.prefix(11))
             }
         default:
             break
@@ -183,8 +183,10 @@ class Moto_AddUserAccountViewController: Moto_ViewController {
                 selectView.frame = UIScreen.main.bounds
                 selectView.show(selectModel) { [weak self] select in
                     guard let self = self else { return }
-                    account_id = select.info_id
-                    titleView.inputText.text = select.info_title
+                    if let _select = select {
+                        account_id = _select.info_id
+                        titleView.inputText.text = _select.info_title
+                    }
                 }
             default:
                 break

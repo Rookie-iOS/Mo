@@ -104,8 +104,10 @@ class Moto_JobViewController: Moto_ViewController {
         if jobType == "1" {
             guard let item = items.first else { return }
             temps.append(item)
+            Moto_UploadRisk.eventUpdate("Industry_category_add_type", value: 2)
         }else {
             temps.append(contentsOf: items)
+            Moto_UploadRisk.eventUpdate("Industry_category_add_type", value: 1)
         }
         var lastItemView:Moto_SelectInputView? = nil
         _ = containerView.subviews.map { $0.removeFromSuperview() }
@@ -209,15 +211,21 @@ class Moto_JobViewController: Moto_ViewController {
                 }
                 guard let selectView = R.nib.moto_SelectInfoView.firstView(withOwner: nil) else { return }
                 selectView.frame = UIScreen.main.bounds
+                Moto_UploadRisk.eventBegin("Industry_category_duration")
+                Moto_UploadRisk.eventCount("Industry_category_updatecount")
                 selectView.show(selectModel) { [weak self] select in
                     guard let self = self else { return }
-                    titleView.inputText.text = select.info_title
-                    model.content = select.info_title
-                    cacheModel.branch = select.info_title
+                    if let _select = select {
+                        titleView.inputText.text = _select.info_title
+                        model.content = _select.info_title
+                        cacheModel.branch = _select.info_title
+                        UserDefaults.standard.setValue(_select.info_type, forKey: "\(Moto_Utils.userInfo()?.phone ?? "")_job_type")
+                        layoutUI()
+                    }
+                    Moto_UploadRisk.eventEnd("Industry_category_duration")
                     guard let data = try? JSONEncoder().encode(cacheModel) else { return }
                     Moto_Utils.saveData(1, String(data: data, encoding: .utf8))
-                    UserDefaults.standard.setValue(select.info_type, forKey: "\(Moto_Utils.userInfo()?.phone ?? "")_job_type")
-                    layoutUI()
+                    
                 }
             case 22:
                 guard let list = infoModel?.working else { return }
@@ -233,9 +241,11 @@ class Moto_JobViewController: Moto_ViewController {
                 selectView.frame = UIScreen.main.bounds
                 selectView.show(selectModel) { [weak self] select in
                     guard let self = self else { return }
-                    titleView.inputText.text = select.info_title
-                    model.content = select.info_title
-                    cacheModel.work_time_long = select.info_title
+                    if let _select = select {
+                        titleView.inputText.text = _select.info_title
+                        model.content = _select.info_title
+                        cacheModel.work_time_long = _select.info_title
+                    }
                     guard let data = try? JSONEncoder().encode(cacheModel) else { return }
                     Moto_Utils.saveData(1, String(data: data, encoding: .utf8))
                     let index = model.idx - 20
@@ -260,9 +270,11 @@ class Moto_JobViewController: Moto_ViewController {
                 selectView.frame = UIScreen.main.bounds
                 selectView.show(selectModel) { [weak self] select in
                     guard let self = self else { return }
-                    titleView.inputText.text = select.info_title
-                    model.content = select.info_title
-                    cacheModel.pay_date_one = select.info_title
+                    if let _select = select {
+                        titleView.inputText.text = _select.info_title
+                        model.content = _select.info_title
+                        cacheModel.pay_date_one = _select.info_title
+                    }
                     guard let data = try? JSONEncoder().encode(cacheModel) else { return }
                     Moto_Utils.saveData(1, String(data: data, encoding: .utf8))
                     
@@ -287,9 +299,11 @@ class Moto_JobViewController: Moto_ViewController {
                 selectView.frame = UIScreen.main.bounds
                 selectView.show(selectModel) { [weak self] select in
                     guard let self = self else { return }
-                    titleView.inputText.text = select.info_title
-                    model.content = select.info_title
-                    cacheModel.pay_date_two = select.info_title
+                    if let _select = select {
+                        titleView.inputText.text = _select.info_title
+                        model.content = _select.info_title
+                        cacheModel.pay_date_two = _select.info_title
+                    }
                     guard let data = try? JSONEncoder().encode(cacheModel) else { return }
                     Moto_Utils.saveData(1, String(data: data, encoding: .utf8))
                     
@@ -315,9 +329,11 @@ class Moto_JobViewController: Moto_ViewController {
                 selectView.frame = UIScreen.main.bounds
                 selectView.show(selectModel) { [weak self] select in
                     guard let self = self else { return }
-                    titleView.inputText.text = select.info_title
-                    model.content = select.info_title
-                    cacheModel.client_salary = select.info_title
+                    if let _select = select {
+                        titleView.inputText.text = _select.info_title
+                        model.content = _select.info_title
+                        cacheModel.client_salary = _select.info_title
+                    }
                     guard let data = try? JSONEncoder().encode(cacheModel) else { return }
                     Moto_Utils.saveData(1, String(data: data, encoding: .utf8))
                 }

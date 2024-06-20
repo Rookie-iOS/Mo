@@ -155,6 +155,14 @@ class Moto_RepayViewController: Moto_ViewController {
         })
     }
     
+    // calc overday by date
+    private func calcOverday(_ date: Int) -> Int {
+        
+        let now = Int(Date().timeIntervalSince1970)
+        let day = ceil(Double((now - date)/60/60)/24.0)
+        return Int(day)
+    }
+    
     private func bindUI() {
         
         repaidView.isHidden = repayModel?.repaid_amount == 0
@@ -179,7 +187,7 @@ class Moto_RepayViewController: Moto_ViewController {
                 topTipsText.text = "Total Repayment"
                 let term = Moto_RepayTermDataModel()
                 term.canEnable = repayModel?.overtime_day == 0
-                term.overdays = repayModel?.overtime_day
+                term.overdays = calcOverday(repayModel?.repay_time ?? 0)
                 term.amount = repayModel?.final_amount
                 term.date = repayModel?.repay_time
                 term.num = 1
@@ -188,7 +196,7 @@ class Moto_RepayViewController: Moto_ViewController {
                 bottomAmoutText.text = "PHP\(Moto_Utils.formatMoney(repayModel?.final_amount ?? 0))"
             }else {
                 let term1 = Moto_RepayTermDataModel()
-                term1.overdays = repayModel?.overtime_day
+                term1.overdays = calcOverday(repayModel?.repay_time ?? 0)
                 term1.amount = is_ins_repay == 1 ? repayModel?.current_amount : repayModel?.final_amount
                 term1.date = repayModel?.repay_time
                 term1.canEnable = false
@@ -201,6 +209,7 @@ class Moto_RepayViewController: Moto_ViewController {
                     
                     let term2 = Moto_RepayTermDataModel()
                     term2.amount = repayModel?.pay_data?.money
+                    term2.overdays = calcOverday(Int(repayModel?.pay_data?.back_time ?? "0") ?? 0)
                     term2.date = Int(repayModel?.pay_data?.back_time ?? "0")
                     term2.num = 2
                     terms.append(term2)

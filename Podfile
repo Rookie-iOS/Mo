@@ -7,6 +7,7 @@ target 'MotorcycleLoan' do
   inhibit_all_warnings!
 
   # Pods for MotorcycleLoan
+  pod 'AppsFlyerFramework'
   pod 'YYText', '~> 1.0.7'
   pod 'R.swift', '~> 7.3.2'
   pod 'SnapKit', '~> 5.6.0'

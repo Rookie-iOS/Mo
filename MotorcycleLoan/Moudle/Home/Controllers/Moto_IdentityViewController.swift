@@ -258,10 +258,12 @@ class Moto_IdentityViewController: Moto_ViewController {
                 selectView.frame = UIScreen.main.bounds
                 selectView.show(selectModel) { [weak self] select in
                     guard let self = self else { return }
-                    titleView.inputText.text = select.info_title
-                    model.content = select.info_title
-                    cacheModel.type_id = select.info_id
-                    cacheModel.IDType = select.info_title
+                    if let _select = select {
+                        titleView.inputText.text = _select.info_title
+                        model.content = _select.info_title
+                        cacheModel.type_id = _select.info_id
+                        cacheModel.IDType = _select.info_title
+                    }
                     guard let data = try? JSONEncoder().encode(cacheModel) else { return }
                     Moto_Utils.saveData(2, String(data: data, encoding: .utf8))
                     // 更新账号输入框类型

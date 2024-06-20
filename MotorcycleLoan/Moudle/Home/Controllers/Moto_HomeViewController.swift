@@ -9,6 +9,7 @@ import UIKit
 import WisdomHUD
 import SwiftPageView
 import StoreKit
+import AppsFlyerLib
 
 class Moto_HomeViewController: Moto_ViewController {
     
@@ -203,6 +204,7 @@ class Moto_HomeViewController: Moto_ViewController {
             navigationController?.pushViewController(face, animated: true)
         case 6:
             reloanAction()
+            AppsFlyerLib.shared().logEvent("mo_huankuan", withValues: nil)
         case 8:
             let feedBack = R.storyboard.mine.moto_feed()!
             feedBack.hidesBottomBarWhenPushed = true

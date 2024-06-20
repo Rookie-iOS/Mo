@@ -181,9 +181,11 @@ class Moto_ContactViewController: Moto_ViewController {
                 selectView.frame = UIScreen.main.bounds
                 selectView.show(selectModel) { [weak self] select in
                     guard let self = self else { return }
-                    inputText.text = select.info_title
-                    item.relation = select.info_title
-                    cacheModel.gx_one = select.info_title
+                    if let _select = select {
+                        inputText.text = _select.info_title
+                        item.relation = _select.info_title
+                        cacheModel.gx_one = _select.info_title
+                    }
                     guard let data = try? JSONEncoder().encode(cacheModel) else { return }
                     Moto_Utils.saveData(1, String(data: data, encoding: .utf8))
                 }
@@ -205,9 +207,11 @@ class Moto_ContactViewController: Moto_ViewController {
                 selectView.frame = UIScreen.main.bounds
                 selectView.show(selectModel) { [weak self] select in
                     guard let self = self else { return }
-                    inputText.text = select.info_title
-                    item.relation = select.info_title
-                    cacheModel.gx_two = select.info_title
+                    if let _select = select {
+                        inputText.text = _select.info_title
+                        item.relation = _select.info_title
+                        cacheModel.gx_two = _select.info_title
+                    }
                     guard let data = try? JSONEncoder().encode(cacheModel) else { return }
                     Moto_Utils.saveData(1, String(data: data, encoding: .utf8))
                 }
@@ -225,9 +229,11 @@ class Moto_ContactViewController: Moto_ViewController {
                 selectView.frame = UIScreen.main.bounds
                 selectView.show(selectModel) { [weak self] select in
                     guard let self = self else { return }
-                    inputText.text = select.info_title
-                    item.relation = select.info_title
-                    cacheModel.gx_three = select.info_title
+                    if let _select = select {
+                        inputText.text = _select.info_title
+                        item.relation = _select.info_title
+                        cacheModel.gx_three = _select.info_title
+                    }
                     guard let data = try? JSONEncoder().encode(cacheModel) else { return }
                     Moto_Utils.saveData(1, String(data: data, encoding: .utf8))
                 }
@@ -245,9 +251,11 @@ class Moto_ContactViewController: Moto_ViewController {
                 selectView.frame = UIScreen.main.bounds
                 selectView.show(selectModel) { [weak self] select in
                     guard let self = self else { return }
-                    inputText.text = select.info_title
-                    item.relation = select.info_title
-                    cacheModel.gx_four = select.info_title
+                    if let _select = select {
+                        inputText.text = _select.info_title
+                        item.relation = _select.info_title
+                        cacheModel.gx_four = _select.info_title
+                    }
                     guard let data = try? JSONEncoder().encode(cacheModel) else { return }
                     Moto_Utils.saveData(1, String(data: data, encoding: .utf8))
                 }
@@ -265,9 +273,11 @@ class Moto_ContactViewController: Moto_ViewController {
                 selectView.frame = UIScreen.main.bounds
                 selectView.show(selectModel) { [weak self] select in
                     guard let self = self else { return }
-                    inputText.text = select.info_title
-                    item.relation = select.info_title
-                    cacheModel.gx_five = select.info_title
+                    if let _select = select {
+                        inputText.text = _select.info_title
+                        item.relation = _select.info_title
+                        cacheModel.gx_five = _select.info_title
+                    }
                     guard let data = try? JSONEncoder().encode(cacheModel) else { return }
                     Moto_Utils.saveData(1, String(data: data, encoding: .utf8))
                 }
@@ -295,6 +305,8 @@ class Moto_ContactViewController: Moto_ViewController {
                 Moto_UploadRisk.uploadRKData(8)
                 let face = R.storyboard.home.moto_identify()!
                 navigationController?.pushViewController(face, animated: true)
+                Moto_UploadRisk.eventAtTime("basic_confirm_time")
+                Moto_UploadRisk.eventEnd("basic_confirm_duration")
             }else {
                 WisdomHUD.showTextCenter(text: model.error ?? "").setFocusing()
             }

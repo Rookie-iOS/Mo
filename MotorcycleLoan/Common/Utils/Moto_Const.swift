@@ -14,5 +14,4 @@ struct Moto_Const {
     static let width = UIScreen.main.bounds.width
     static let height = UIScreen.main.bounds.height
     static let home_max_moeny_key = "home_max_money_key"
-    static let show_pre_authentication_key = "show_pre_authentication_key"
 }

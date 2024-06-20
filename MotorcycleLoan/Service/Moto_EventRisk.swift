@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Moto_EventRisk {
+class Moto_EventRisk: Codable {
     
     var client_id = -999
     var apply_now_time = -999

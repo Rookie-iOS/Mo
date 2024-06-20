@@ -8,6 +8,7 @@
 import UIKit
 import YYText
 import WisdomHUD
+import AppsFlyerLib
 
 class Moto_SetPasswdViewController: Moto_ViewController {
     
@@ -115,6 +116,7 @@ class Moto_SetPasswdViewController: Moto_ViewController {
             guard let model = try? JSONDecoder().decode(Moto_BaseModel<Moto_DataModel>.self, from: jsonData) else { return }
             if model.code == 200 {
                 login(_mobile, passwd)
+                AppsFlyerLib.shared().logEvent("mo_zhuce", withValues: nil)
             }else {
                 WisdomHUD.showTextCenter(text: model.error ?? "").setFocusing()
             }

@@ -9,6 +9,7 @@ import UIKit
 import YYText
 import StoreKit
 import WisdomHUD
+import AppsFlyerLib
 
 class Moto_LoanViewController: Moto_ViewController {
     
@@ -22,7 +23,7 @@ class Moto_LoanViewController: Moto_ViewController {
     private var isReloan = false
     var bingingStatus: Int = 1
     var product: Moto_ProductModel?
-    private var pay_type = 2
+    private var pay_type: Int?
     private var currentIdx = 0
     private var _maxMoney: Int = 0
     private var group = DispatchGroup()
@@ -291,6 +292,7 @@ class Moto_LoanViewController: Moto_ViewController {
         let range = accountNo.startIndex ..< accountNo.index(accountNo.endIndex, offsetBy: -4)
         let encry = accountNo.replacingCharacters(in: range, with: "****")
         accountText.text = "\(account.bank_name ?? "") \(encry)"
+        pay_type = account.type ?? 2
     }
     
     private func layoutTerms() {
@@ -440,6 +442,7 @@ class Moto_LoanViewController: Moto_ViewController {
          moto_pay_type: 2: 电子钱包 1：银行卡
          */
         guard let pid = product?.id else { confirmBtn.isEnabled = true; return }
+        guard let _pay_type = pay_type else { confirmBtn.isEnabled = true; return }
         let params: [String: Any] = [
             "pid": pid,
             "moto_tid": selectTermModel?.term_id ?? "",
@@ -447,10 +450,10 @@ class Moto_LoanViewController: Moto_ViewController {
             "moto_rid": selectInfoModel?.rid ?? "",
             "moto_days": selectTermModel?.days ?? "",
             "moto_pro_id": selectTermModel?.info?.pro_id ?? "",
-            "moto_pay_type": pay_type,
+            "moto_pay_type": _pay_type,
             "check_type": bingingStatus,
         ]
-        
+
         WisdomHUD.showLoading(text: "")
         Moto_Networking.request(path: Moto_Apis.Moto_api_submit_loan, method: .post, params: params) { [weak self] data in
             guard let self = self else {
@@ -524,6 +527,11 @@ class Moto_LoanViewController: Moto_ViewController {
         }
         
         var url: String!
+        guard let _pay_type = pay_type else { confirmBtn.isEnabled = true; return }
+        if _pay_type != 1 || _pay_type != 2 {
+            confirmBtn.isEnabled = true
+            return
+        }
         if pay_type == 1 {
             url = Moto_Apis.Moto_api_bank_loan
             params["moto_days"] = selectTermModel?.days ?? ""
@@ -558,6 +566,7 @@ class Moto_LoanViewController: Moto_ViewController {
                 loanSuccess()
                 guard let oid = model.data?.oid, let deta_id = model.data?.deta_id else { return }
                 Moto_UploadRisk.uploadRKData(2, oid, deta_id)
+                AppsFlyerLib.shared().logEvent("mo_shendai", withValues: nil)
             }else {
                 WisdomHUD.showTextCenter(text: model.error ?? "").setFocusing()
             }
@@ -703,7 +712,8 @@ class Moto_LoanViewController: Moto_ViewController {
                 guard let account = userAccount else {
                     return
                 }
-                popView.show(pay_type, account, loan) { [weak self] tag, passwd in
+                guard let _pay_type = pay_type else { return }
+                popView.show(_pay_type, account, loan) { [weak self] tag, passwd in
                     guard let self = self else {
                         return
                     }

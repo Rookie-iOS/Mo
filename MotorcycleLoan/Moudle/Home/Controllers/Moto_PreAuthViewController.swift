@@ -21,9 +21,6 @@ class Moto_PreAuthViewController: Moto_ViewController {
     // Continue Action
     @IBAction func continueAction() {
         
-        guard let mobile = Moto_Utils.userInfo()?.phone else { return }
-        UserDefaults.standard.setValue(true, forKey: "\(Moto_Const.show_pre_authentication_key)_\(mobile)")
-        
         let list = R.storyboard.home.moto_auth_center()!
         navigationController?.pushViewController(list, animated: true)
     }

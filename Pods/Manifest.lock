@@ -3,6 +3,9 @@ PODS:
     - AAINetwork
   - AAINetwork (1.0.1)
   - Alamofire (5.8.1)
+  - AppsFlyerFramework (6.14.4):
+    - AppsFlyerFramework/Main (= 6.14.4)
+  - AppsFlyerFramework/Main (6.14.4)
   - CryptoSwift (1.8.2)
   - DYFCryptoUtils (1.0.2)
   - IQKeyboardManagerSwift (7.0.3)
@@ -21,6 +24,7 @@ DEPENDENCIES:
   - "AAILiveness (from `{:http=>\"https://prod-guardian-cv.oss-ap-southeast-5.aliyuncs.com/sdk/iOS-liveness-detection/3.0.4/iOS-Liveness-SDK-V3.0.4.tar.bz2\", :type=>:tbz}`)"
   - "AAINetwork (from `{:http=>\"https://prod-guardian-cv.oss-ap-southeast-5.aliyuncs.com/sdk/iOS-libraries/AAINetwork/AAINetwork-V1.0.1.tar.bz2\", :type=>:tbz}`)"
   - Alamofire (~> 5.8.1)
+  - AppsFlyerFramework
   - CryptoSwift (~> 1.8.2)
   - DYFCryptoUtils (~> 1.0.2)
   - IQKeyboardManagerSwift (~> 7.0.2)
@@ -36,6 +40,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AppsFlyerFramework
     - CryptoSwift
     - DYFCryptoUtils
     - IQKeyboardManagerSwift
@@ -68,6 +73,7 @@ SPEC CHECKSUMS:
   AAILiveness: e8a76721fd24548c3187aedb479b24f4bfcce2b0
   AAINetwork: d99b459450b7725e47bb19a5a4c0279953827dae
   Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
+  AppsFlyerFramework: 4d7e8c7a6d8487e2ec84b63ba3603ec985308ac4
   CryptoSwift: c63a805d8bb5e5538e88af4e44bb537776af11ea
   DYFCryptoUtils: 4dc11ebac8f2a02a98874081e052f974cf14af71
   IQKeyboardManagerSwift: f9c5dc36cba16ddd2e51fa7d51c34a2e083029b5
@@ -80,6 +86,6 @@ SPEC CHECKSUMS:
   WisdomHUD: 0b70763a58dcfbdf7b57b1519305e1145a531e2c
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 09c9970b64313708c72f972dd60563e7c727a8f6
+PODFILE CHECKSUM: 04abf41258be439eb4a115b4a521a1fe54110b12
 
 COCOAPODS: 1.14.3

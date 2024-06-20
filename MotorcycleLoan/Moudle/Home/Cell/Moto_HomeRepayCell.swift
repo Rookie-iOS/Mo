@@ -7,6 +7,7 @@
 
 import UIKit
 import YYText
+import AppsFlyerLib
 
 class Moto_HomeRepayCell: UITableViewCell {
     
@@ -83,5 +84,6 @@ class Moto_HomeRepayCell: UITableViewCell {
         repay.product = _product
         repay.hidesBottomBarWhenPushed = true
         controller?.navigationController?.pushViewController(repay, animated: true)
+        AppsFlyerLib.shared().logEvent("mo_fangkuan", withValues: nil)
     }
 }
